@@ -16,7 +16,7 @@ MacBook Pro (15-inch, 2017)
 16 GB 2133 MHz LPDDR3
 ```
 
-## How-to
+## How
 
 ```shell script
 # make benchmarks as an executable
@@ -33,7 +33,7 @@ $ sed 's/_Two_//' bench.txt > two.txt
 $ benchstat one.txt two.txt > result.txt
 ```
 
-## Result
+## Well
 
 ```
 name                  old time/op    new time/op    delta
