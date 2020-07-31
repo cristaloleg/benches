@@ -23,7 +23,7 @@ MacBook Pro (15-inch, 2017)
 $ go test -c -o jwt-bench
 
 # run them
-$ time ./jwt-bench -test.v -test.bench ^Benchmark -test.count 10 -test.run ^$ > bench.txt
+$ time ./jwt-bench -test.v -test.benchmem -test.bench ^Benchmark -test.count 10 -test.run ^$ > bench.txt
 
 # split output into files
 $ sed 's/_One_//' bench.txt > one.txt
