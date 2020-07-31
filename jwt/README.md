@@ -8,6 +8,14 @@ vs
 github.com/cristalhq/jwt/v3 v3.0.1
 ```
 
+## Where
+
+```
+MacBook Pro (15-inch, 2017)
+2,8 GHz Quad-Core Intel Core i7
+16 GB 2133 MHz LPDDR3
+```
+
 ## How-to
 
 ```shell script
