@@ -2,5 +2,9 @@ github.com/cristalhq/jwt/v3 v3.0.0 h1:0PtBLOa6XEZj6powOaneZCxU3+yiFSYwVeL2wmbavn
 github.com/cristalhq/jwt/v3 v3.0.0/go.mod h1:XOnIXst8ozq/esy5N1XOlSyQqBd+84fxJ99FK+1jgL8=
 github.com/cristalhq/jwt/v3 v3.0.1 h1:fNngNxOOrdl1a1XiQtX5WTTJF2gkpisGdk9zPlXOhvA=
 github.com/cristalhq/jwt/v3 v3.0.1/go.mod h1:XOnIXst8ozq/esy5N1XOlSyQqBd+84fxJ99FK+1jgL8=
+github.com/cristalhq/jwt/v3 v3.0.2 h1:y5aYVOJysyPRZvRGblEAYfphqERNPgTGWOA9DUUK1t8=
+github.com/cristalhq/jwt/v3 v3.0.2/go.mod h1:XOnIXst8ozq/esy5N1XOlSyQqBd+84fxJ99FK+1jgL8=
 github.com/pascaldekloe/jwt v1.9.0 h1:zOjU2IgIe36JE/xTsGIDCRZzDN8trpyWhdfOZHg/y1o=
 github.com/pascaldekloe/jwt v1.9.0/go.mod h1:TKhllgThT7TOP5rGr2zMLKEDZRAgJfBbtKyVeRsNB9A=
+github.com/pascaldekloe/jwt v1.9.1-0.20200807200200-9fb2ff1e1c9e h1:AFaEzLrqKmHutfp4GPoMpkPETzLfDvnx9LWm39B1sO4=
+github.com/pascaldekloe/jwt v1.9.1-0.20200807200200-9fb2ff1e1c9e/go.mod h1:TKhllgThT7TOP5rGr2zMLKEDZRAgJfBbtKyVeRsNB9A=

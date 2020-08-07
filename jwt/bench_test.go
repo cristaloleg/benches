@@ -5,6 +5,7 @@ import (
 	"crypto/ed25519"
 	"crypto/rsa"
 	"crypto/x509"
+	"encoding/json"
 	"encoding/pem"
 	"fmt"
 	"testing"
@@ -43,15 +44,12 @@ func Benchmark_One_ECDSA(b *testing.B) {
 
 	for _, test := range tests {
 		b.Run("sign-"+test.alg, func(b *testing.B) {
-			var tokenLen int
 			for i := 0; i < b.N; i++ {
-				token, err := benchClaims.ECDSASign(test.alg, test.key)
+				_, err := benchClaims.ECDSASign(test.alg, test.key)
 				if err != nil {
 					b.Fatal(err)
 				}
-				tokenLen += len(token)
 			}
-			b.ReportMetric(float64(tokenLen)/float64(b.N), "B/token")
 		})
 	}
 
@@ -74,15 +72,12 @@ func Benchmark_One_ECDSA(b *testing.B) {
 
 func Benchmark_One_EdDSA(b *testing.B) {
 	b.Run("sign-"+jwt1.EdDSA, func(b *testing.B) {
-		var tokenLen int
 		for i := 0; i < b.N; i++ {
-			token, err := benchClaims.EdDSASign(testKeyEd25519Private)
+			_, err := benchClaims.EdDSASign(testKeyEd25519Private)
 			if err != nil {
 				b.Fatal(err)
 			}
-			tokenLen += len(token)
 		}
-		b.ReportMetric(float64(tokenLen)/float64(b.N), "B/token")
 	})
 
 	b.Run("check-"+jwt1.EdDSA, func(b *testing.B) {
@@ -107,19 +102,27 @@ func Benchmark_One_HMAC(b *testing.B) {
 
 	for _, alg := range algs {
 		b.Run("sign-"+alg, func(b *testing.B) {
-			var tokenLen int
 			for i := 0; i < b.N; i++ {
-				token, err := benchClaims.HMACSign(alg, secret)
+				_, err := benchClaims.HMACSign(alg, secret)
 				if err != nil {
 					b.Fatal(err)
 				}
-				tokenLen += len(token)
 			}
-			b.ReportMetric(float64(tokenLen)/float64(b.N), "B/token")
 		})
-	}
 
-	for _, alg := range algs {
+		b.Run("sign-"+alg+"-reuse", func(b *testing.B) {
+			h, err := jwt1.NewHMAC(alg, secret)
+			if err != nil {
+				b.Fatal(err)
+			}
+			for i := 0; i < b.N; i++ {
+				_, err := h.Sign(benchClaims)
+				if err != nil {
+					b.Fatal(err)
+				}
+			}
+		})
+
 		token, err := benchClaims.HMACSign(alg, secret)
 		if err != nil {
 			b.Fatal(err)
@@ -133,6 +136,19 @@ func Benchmark_One_HMAC(b *testing.B) {
 				}
 			}
 		})
+
+		b.Run("check-"+alg+"-reuse", func(b *testing.B) {
+			h, err := jwt1.NewHMAC(alg, secret)
+			if err != nil {
+				b.Fatal(err)
+			}
+			for i := 0; i < b.N; i++ {
+				_, err := h.Check(token)
+				if err != nil {
+					b.Fatal(err)
+				}
+			}
+		})
 	}
 }
 
@@ -141,15 +157,12 @@ func Benchmark_One_RSA(b *testing.B) {
 
 	for _, key := range keys {
 		b.Run(fmt.Sprintf("sign-%d-bit", key.Size()*8), func(b *testing.B) {
-			var tokenLen int
 			for i := 0; i < b.N; i++ {
-				token, err := benchClaims.RSASign(jwt1.RS384, key)
+				_, err := benchClaims.RSASign(jwt1.RS384, key)
 				if err != nil {
 					b.Fatal(err)
 				}
-				tokenLen += len(token)
 			}
-			b.ReportMetric(float64(tokenLen)/float64(b.N), "B/token")
 		})
 	}
 
@@ -181,33 +194,43 @@ func Benchmark_Two_ECDSA(b *testing.B) {
 	}
 
 	for _, test := range tests {
-		signer, _ := jwt2.NewSignerES(test.alg, test.key)
+		signer, err := jwt2.NewSignerES(test.alg, test.key)
+		if err != nil {
+			b.Fatal(err)
+		}
 		bui := jwt2.NewBuilder(signer)
 		b.Run("sign-"+test.alg.String(), func(b *testing.B) {
-			var tokenLen int
 			for i := 0; i < b.N; i++ {
-				token, err := bui.BuildBytes(mybenchClaims)
+				_, err := bui.BuildBytes(mybenchClaims)
 				if err != nil {
 					b.Fatal(err)
 				}
-				tokenLen += len(token)
 			}
-			b.ReportMetric(float64(tokenLen)/float64(b.N), "B/token")
 		})
 	}
 
 	for _, test := range tests {
-		signer, _ := jwt2.NewSignerES(test.alg, test.key)
+		signer, err := jwt2.NewSignerES(test.alg, test.key)
+		if err != nil {
+			b.Fatal(err)
+		}
 		bui := jwt2.NewBuilder(signer)
-		token, err := bui.Build(mybenchClaims)
+		token, err := bui.BuildBytes(mybenchClaims)
 		if err != nil {
 			b.Fatal(err)
 		}
 
-		verifier, _ := jwt2.NewVerifierES(test.alg, &test.key.PublicKey)
+		verifier, err := jwt2.NewVerifierES(test.alg, &test.key.PublicKey)
+		if err != nil {
+			b.Fatal(err)
+		}
 		b.Run("check-"+test.alg.String(), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				err := verifier.Verify(token.Payload(), token.Signature())
+				obj, err := jwt2.ParseAndVerify(token, verifier)
+				if err != nil {
+					b.Fatal(err)
+				}
+				err = json.Unmarshal(obj.RawClaims(), new(map[string]interface{}))
 				if err != nil {
 					b.Fatal(err)
 				}
@@ -217,29 +240,36 @@ func Benchmark_Two_ECDSA(b *testing.B) {
 }
 
 func Benchmark_Two_EdDSA(b *testing.B) {
-	signer, _ := jwt2.NewSignerEdDSA(testKeyEd25519Private)
-	bui := jwt2.NewBuilder(signer)
-	b.Run("sign-"+jwt2.EdDSA.String(), func(b *testing.B) {
-		var tokenLen int
-		for i := 0; i < b.N; i++ {
-			token, err := bui.BuildBytes(mybenchClaims)
-			if err != nil {
-				b.Fatal(err)
-			}
-			tokenLen += len(token)
-		}
-		b.ReportMetric(float64(tokenLen)/float64(b.N), "B/token")
-	})
-
-	token, err := jwt2.NewBuilder(signer).Build(mybenchClaims)
+	signer, err := jwt2.NewSignerEdDSA(testKeyEd25519Private)
 	if err != nil {
 		b.Fatal(err)
 	}
-	verifier, _ := jwt2.NewVerifierEdDSA(testKeyEd25519Public)
+	bui := jwt2.NewBuilder(signer)
+	b.Run("sign-"+jwt2.EdDSA.String(), func(b *testing.B) {
+		for i := 0; i < b.N; i++ {
+			_, err := bui.BuildBytes(mybenchClaims)
+			if err != nil {
+				b.Fatal(err)
+			}
+		}
+	})
 
+	token, err := bui.BuildBytes(mybenchClaims)
+	if err != nil {
+		b.Fatal(err)
+	}
+
+	verifier, err := jwt2.NewVerifierEdDSA(testKeyEd25519Public)
+	if err != nil {
+		b.Fatal(err)
+	}
 	b.Run("check-"+jwt2.EdDSA.String(), func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			err := verifier.Verify(token.Payload(), token.Signature())
+			obj, err := jwt2.ParseAndVerify(token, verifier)
+			if err != nil {
+				b.Fatal(err)
+			}
+			err = json.Unmarshal(obj.RawClaims(), new(map[string]interface{}))
 			if err != nil {
 				b.Fatal(err)
 			}
@@ -253,32 +283,69 @@ func Benchmark_Two_HMAC(b *testing.B) {
 	algs := []jwt2.Algorithm{jwt2.HS256, jwt2.HS384, jwt2.HS512}
 
 	for _, alg := range algs {
-		signer, _ := jwt2.NewSignerHS(alg, secret)
-		bui := jwt2.NewBuilder(signer)
-		b.Run("sign-"+alg.String(), func(b *testing.B) {
-			var tokenLen int
+		b.Run("sign-"+alg.String()+"-reuse", func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				token, err := bui.BuildBytes(mybenchClaims)
+				signer, err := jwt2.NewSignerHS(alg, secret)
 				if err != nil {
 					b.Fatal(err)
 				}
-				tokenLen += len(token)
+				bui := jwt2.NewBuilder(signer)
+				_, err = bui.BuildBytes(mybenchClaims)
+				if err != nil {
+					b.Fatal(err)
+				}
 			}
-			b.ReportMetric(float64(tokenLen)/float64(b.N), "B/token")
 		})
-	}
+		b.Run("sign-"+alg.String()+"-reuse", func(b *testing.B) {
+			signer, err := jwt2.NewSignerHS(alg, secret)
+			if err != nil {
+				b.Fatal(err)
+			}
+			bui := jwt2.NewBuilder(signer)
+			for i := 0; i < b.N; i++ {
+				_, err := bui.BuildBytes(mybenchClaims)
+				if err != nil {
+					b.Fatal(err)
+				}
+			}
+		})
 
-	for _, alg := range algs {
-		signer, _ := jwt2.NewSignerHS(alg, secret)
-		token, err := jwt2.NewBuilder(signer).Build(mybenchClaims)
+		signer, err := jwt2.NewSignerHS(alg, secret)
+		if err != nil {
+			b.Fatal(err)
+		}
+		token, err := jwt2.NewBuilder(signer).BuildBytes(mybenchClaims)
 		if err != nil {
 			b.Fatal(err)
 		}
 
-		verifier, _ := jwt2.NewVerifierHS(alg, secret)
 		b.Run("check-"+alg.String(), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				err := verifier.Verify(token.Payload(), token.Signature())
+				verifier, err := jwt2.NewVerifierHS(alg, secret)
+				if err != nil {
+					b.Fatal(err)
+				}
+				obj, err := jwt2.ParseAndVerify(token, verifier)
+				if err != nil {
+					b.Fatal(err)
+				}
+				err = json.Unmarshal(obj.RawClaims(), new(map[string]interface{}))
+				if err != nil {
+					b.Fatal(err)
+				}
+			}
+		})
+		b.Run("check-"+alg.String()+"-reuse", func(b *testing.B) {
+			verifier, err := jwt2.NewVerifierHS(alg, secret)
+			if err != nil {
+				b.Fatal(err)
+			}
+			for i := 0; i < b.N; i++ {
+				obj, err := jwt2.ParseAndVerify(token, verifier)
+				if err != nil {
+					b.Fatal(err)
+				}
+				err = json.Unmarshal(obj.RawClaims(), new(map[string]interface{}))
 				if err != nil {
 					b.Fatal(err)
 				}
@@ -294,29 +361,36 @@ func Benchmark_Two_RSA(b *testing.B) {
 		signer, _ := jwt2.NewSignerRS(jwt2.RS384, key)
 		bui := jwt2.NewBuilder(signer)
 		b.Run(fmt.Sprintf("sign-%d-bit", key.Size()*8), func(b *testing.B) {
-			var tokenLen int
 			for i := 0; i < b.N; i++ {
-				token, err := bui.BuildBytes(mybenchClaims)
+				_, err := bui.BuildBytes(mybenchClaims)
 				if err != nil {
 					b.Fatal(err)
 				}
-				tokenLen += len(token)
 			}
-			b.ReportMetric(float64(tokenLen)/float64(b.N), "B/token")
 		})
 	}
 
 	for _, key := range keys {
-		signer, _ := jwt2.NewSignerRS(jwt2.RS384, key)
-		token, err := jwt2.NewBuilder(signer).Build(mybenchClaims)
+		signer, err := jwt2.NewSignerRS(jwt2.RS384, key)
+		if err != nil {
+			b.Fatal(err)
+		}
+		token, err := jwt2.NewBuilder(signer).BuildBytes(mybenchClaims)
 		if err != nil {
 			b.Fatal(err)
 		}
 
-		verifier, _ := jwt2.NewVerifierRS(jwt2.RS384, &key.PublicKey)
+		verifier, err := jwt2.NewVerifierRS(jwt2.RS384, &key.PublicKey)
+		if err != nil {
+			b.Fatal(err)
+		}
 		b.Run(fmt.Sprintf("check-%d-bit", key.Size()*8), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				err := verifier.Verify(token.Payload(), token.Signature())
+				obj, err := jwt2.ParseAndVerify(token, verifier)
+				if err != nil {
+					b.Fatal(err)
+				}
+				err = json.Unmarshal(obj.RawClaims(), new(map[string]interface{}))
 				if err != nil {
 					b.Fatal(err)
 				}
