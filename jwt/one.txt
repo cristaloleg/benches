@@ -1,452 +1,588 @@
 goos: darwin
 goarch: amd64
 pkg: github.com/cristaloleg/benches/jwt
-BenchmarkECDSA
-BenchmarkECDSA/sign-ES256
-BenchmarkECDSA/sign-ES256-8         	   40658	     28515 ns/op	       166 B/token	    3042 B/op	      35 allocs/op
-BenchmarkECDSA/sign-ES256-8         	   43417	     27553 ns/op	       166 B/token	    3042 B/op	      35 allocs/op
-BenchmarkECDSA/sign-ES256-8         	   43014	     27467 ns/op	       166 B/token	    3042 B/op	      35 allocs/op
-BenchmarkECDSA/sign-ES256-8         	   42681	     28352 ns/op	       166 B/token	    3042 B/op	      35 allocs/op
-BenchmarkECDSA/sign-ES256-8         	   43029	     27753 ns/op	       166 B/token	    3042 B/op	      35 allocs/op
-BenchmarkECDSA/sign-ES256-8         	   43813	     27306 ns/op	       166 B/token	    3042 B/op	      35 allocs/op
-BenchmarkECDSA/sign-ES256-8         	   42182	     28452 ns/op	       166 B/token	    3042 B/op	      35 allocs/op
-BenchmarkECDSA/sign-ES256-8         	   40879	     27712 ns/op	       166 B/token	    3042 B/op	      35 allocs/op
-BenchmarkECDSA/sign-ES256-8         	   43093	     27281 ns/op	       166 B/token	    3042 B/op	      35 allocs/op
-BenchmarkECDSA/sign-ES256-8         	   42250	     27803 ns/op	       166 B/token	    3042 B/op	      35 allocs/op
-BenchmarkECDSA/sign-ES384
-BenchmarkECDSA/sign-ES384-8         	     261	   4692826 ns/op	       208 B/token	 1748766 B/op	   14436 allocs/op
-BenchmarkECDSA/sign-ES384-8         	     259	   4671731 ns/op	       208 B/token	 1747223 B/op	   14425 allocs/op
-BenchmarkECDSA/sign-ES384-8         	     252	   4726764 ns/op	       208 B/token	 1743936 B/op	   14397 allocs/op
-BenchmarkECDSA/sign-ES384-8         	     256	   4646295 ns/op	       208 B/token	 1747371 B/op	   14427 allocs/op
-BenchmarkECDSA/sign-ES384-8         	     262	   4612075 ns/op	       208 B/token	 1744610 B/op	   14403 allocs/op
-BenchmarkECDSA/sign-ES384-8         	     249	   4676322 ns/op	       208 B/token	 1747851 B/op	   14429 allocs/op
-BenchmarkECDSA/sign-ES384-8         	     259	   4716560 ns/op	       208 B/token	 1744845 B/op	   14406 allocs/op
-BenchmarkECDSA/sign-ES384-8         	     253	   4656377 ns/op	       208 B/token	 1748347 B/op	   14434 allocs/op
-BenchmarkECDSA/sign-ES384-8         	     262	   4731749 ns/op	       208 B/token	 1751422 B/op	   14458 allocs/op
-BenchmarkECDSA/sign-ES384-8         	     255	   4702585 ns/op	       208 B/token	 1747158 B/op	   14425 allocs/op
-BenchmarkECDSA/sign-ES512
-BenchmarkECDSA/sign-ES512-8         	     146	   8242933 ns/op	       256 B/token	 3027077 B/op	   19574 allocs/op
-BenchmarkECDSA/sign-ES512-8         	     150	   8065639 ns/op	       256 B/token	 3025690 B/op	   19564 allocs/op
-BenchmarkECDSA/sign-ES512-8         	     146	   8469766 ns/op	       256 B/token	 3022896 B/op	   19548 allocs/op
-BenchmarkECDSA/sign-ES512-8         	     136	   9305253 ns/op	       256 B/token	 3029221 B/op	   19587 allocs/op
-BenchmarkECDSA/sign-ES512-8         	     100	  10106326 ns/op	       256 B/token	 3031246 B/op	   19599 allocs/op
-BenchmarkECDSA/sign-ES512-8         	     100	  10304095 ns/op	       256 B/token	 3016659 B/op	   19508 allocs/op
-BenchmarkECDSA/sign-ES512-8         	     100	  10204050 ns/op	       256 B/token	 3029390 B/op	   19587 allocs/op
-BenchmarkECDSA/sign-ES512-8         	     121	   8941462 ns/op	       256 B/token	 3028460 B/op	   19581 allocs/op
-BenchmarkECDSA/sign-ES512-8         	     123	   8754177 ns/op	       256 B/token	 3027070 B/op	   19574 allocs/op
-BenchmarkECDSA/sign-ES512-8         	     140	   8603187 ns/op	       256 B/token	 3023737 B/op	   19553 allocs/op
-BenchmarkECDSA/check-ES256
-BenchmarkECDSA/check-ES256-8        	   12544	     98930 ns/op	    2544 B/op	      46 allocs/op
-BenchmarkECDSA/check-ES256-8        	   10000	    107304 ns/op	    2544 B/op	      46 allocs/op
-BenchmarkECDSA/check-ES256-8        	   12126	     91861 ns/op	    2545 B/op	      46 allocs/op
-BenchmarkECDSA/check-ES256-8        	   12684	     92644 ns/op	    2545 B/op	      46 allocs/op
-BenchmarkECDSA/check-ES256-8        	   12686	     93926 ns/op	    2544 B/op	      46 allocs/op
-BenchmarkECDSA/check-ES256-8        	   12676	     99156 ns/op	    2545 B/op	      46 allocs/op
-BenchmarkECDSA/check-ES256-8        	   12829	     91780 ns/op	    2544 B/op	      46 allocs/op
-BenchmarkECDSA/check-ES256-8        	   13340	     91909 ns/op	    2544 B/op	      46 allocs/op
-BenchmarkECDSA/check-ES256-8        	   12939	     91326 ns/op	    2544 B/op	      46 allocs/op
-BenchmarkECDSA/check-ES256-8        	   13404	     90037 ns/op	    2544 B/op	      46 allocs/op
-BenchmarkECDSA/check-ES384
-BenchmarkECDSA/check-ES384-8        	     128	   9302124 ns/op	 3491795 B/op	   28863 allocs/op
-BenchmarkECDSA/check-ES384-8        	     128	   9332320 ns/op	 3491835 B/op	   28863 allocs/op
-BenchmarkECDSA/check-ES384-8        	     129	   9553585 ns/op	 3491820 B/op	   28863 allocs/op
-BenchmarkECDSA/check-ES384-8        	     127	   9396133 ns/op	 3491818 B/op	   28863 allocs/op
-BenchmarkECDSA/check-ES384-8        	     128	   9253598 ns/op	 3491819 B/op	   28863 allocs/op
-BenchmarkECDSA/check-ES384-8        	     127	   9253468 ns/op	 3491821 B/op	   28863 allocs/op
-BenchmarkECDSA/check-ES384-8        	     128	   9296549 ns/op	 3491846 B/op	   28863 allocs/op
-BenchmarkECDSA/check-ES384-8        	     127	   9218739 ns/op	 3491782 B/op	   28863 allocs/op
-BenchmarkECDSA/check-ES384-8        	     129	   9202959 ns/op	 3491833 B/op	   28863 allocs/op
-BenchmarkECDSA/check-ES384-8        	     128	   9284453 ns/op	 3491854 B/op	   28864 allocs/op
-BenchmarkECDSA/check-ES512
-BenchmarkECDSA/check-ES512-8        	      74	  16283315 ns/op	 6118764 B/op	   39604 allocs/op
-BenchmarkECDSA/check-ES512-8        	      75	  16409172 ns/op	 6118724 B/op	   39604 allocs/op
-BenchmarkECDSA/check-ES512-8        	      73	  16370096 ns/op	 6118782 B/op	   39605 allocs/op
-BenchmarkECDSA/check-ES512-8        	      74	  16390112 ns/op	 6118762 B/op	   39604 allocs/op
-BenchmarkECDSA/check-ES512-8        	      75	  16628968 ns/op	 6118856 B/op	   39606 allocs/op
-BenchmarkECDSA/check-ES512-8        	      73	  16905600 ns/op	 6118751 B/op	   39604 allocs/op
-BenchmarkECDSA/check-ES512-8        	      72	  16497575 ns/op	 6118764 B/op	   39604 allocs/op
-BenchmarkECDSA/check-ES512-8        	      73	  16497470 ns/op	 6118704 B/op	   39604 allocs/op
-BenchmarkECDSA/check-ES512-8        	      75	  15974393 ns/op	 6118740 B/op	   39605 allocs/op
-BenchmarkECDSA/check-ES512-8        	      79	  15842301 ns/op	 6118765 B/op	   39605 allocs/op
-BenchmarkEdDSA
-BenchmarkEdDSA/sign-EdDSA
-BenchmarkEdDSA/sign-EdDSA-8         	   23318	     54345 ns/op	       166 B/token	     672 B/op	       7 allocs/op
-BenchmarkEdDSA/sign-EdDSA-8         	   23072	     53376 ns/op	       166 B/token	     672 B/op	       7 allocs/op
-BenchmarkEdDSA/sign-EdDSA-8         	   21410	     54265 ns/op	       166 B/token	     672 B/op	       7 allocs/op
-BenchmarkEdDSA/sign-EdDSA-8         	   22392	     56076 ns/op	       166 B/token	     672 B/op	       7 allocs/op
-BenchmarkEdDSA/sign-EdDSA-8         	   22017	     54796 ns/op	       166 B/token	     672 B/op	       7 allocs/op
-BenchmarkEdDSA/sign-EdDSA-8         	   20434	     57395 ns/op	       166 B/token	     672 B/op	       7 allocs/op
-BenchmarkEdDSA/sign-EdDSA-8         	   22108	     55860 ns/op	       166 B/token	     672 B/op	       7 allocs/op
-BenchmarkEdDSA/sign-EdDSA-8         	   21804	     52897 ns/op	       166 B/token	     672 B/op	       7 allocs/op
-BenchmarkEdDSA/sign-EdDSA-8         	   23336	     53561 ns/op	       166 B/token	     672 B/op	       7 allocs/op
-BenchmarkEdDSA/sign-EdDSA-8         	   22080	     53769 ns/op	       166 B/token	     672 B/op	       7 allocs/op
-BenchmarkEdDSA/check-EdDSA
-BenchmarkEdDSA/check-EdDSA-8        	    8668	    136448 ns/op	    1616 B/op	      28 allocs/op
-BenchmarkEdDSA/check-EdDSA-8        	    8658	    137501 ns/op	    1616 B/op	      28 allocs/op
-BenchmarkEdDSA/check-EdDSA-8        	    8577	    135675 ns/op	    1616 B/op	      28 allocs/op
-BenchmarkEdDSA/check-EdDSA-8        	    7243	    141651 ns/op	    1616 B/op	      28 allocs/op
-BenchmarkEdDSA/check-EdDSA-8        	    8619	    136385 ns/op	    1616 B/op	      28 allocs/op
-BenchmarkEdDSA/check-EdDSA-8        	    8734	    135377 ns/op	    1616 B/op	      28 allocs/op
-BenchmarkEdDSA/check-EdDSA-8        	    8634	    138544 ns/op	    1616 B/op	      28 allocs/op
-BenchmarkEdDSA/check-EdDSA-8        	    8695	    140963 ns/op	    1616 B/op	      28 allocs/op
-BenchmarkEdDSA/check-EdDSA-8        	    8584	    138515 ns/op	    1616 B/op	      28 allocs/op
-BenchmarkEdDSA/check-EdDSA-8        	    8499	    136701 ns/op	    1616 B/op	      28 allocs/op
-BenchmarkHMAC
-BenchmarkHMAC/sign-HS256
-BenchmarkHMAC/sign-HS256-8          	  557024	      2191 ns/op	       123 B/token	     656 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS256-8          	  551098	      2232 ns/op	       123 B/token	     656 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS256-8          	  553696	      2184 ns/op	       123 B/token	     656 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS256-8          	  552475	      2191 ns/op	       123 B/token	     656 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS256-8          	  549512	      2240 ns/op	       123 B/token	     656 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS256-8          	  552900	      2211 ns/op	       123 B/token	     656 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS256-8          	  562359	      2192 ns/op	       123 B/token	     656 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS256-8          	  552968	      2212 ns/op	       123 B/token	     656 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS256-8          	  563920	      2199 ns/op	       123 B/token	     656 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS256-8          	  559642	      2217 ns/op	       123 B/token	     656 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS384
-BenchmarkHMAC/sign-HS384-8          	  481528	      2504 ns/op	       144 B/token	     992 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS384-8          	  491485	      2518 ns/op	       144 B/token	     992 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS384-8          	  486122	      2543 ns/op	       144 B/token	     992 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS384-8          	  490966	      2522 ns/op	       144 B/token	     992 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS384-8          	  483770	      2516 ns/op	       144 B/token	     992 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS384-8          	  484981	      2508 ns/op	       144 B/token	     992 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS384-8          	  475070	      2497 ns/op	       144 B/token	     992 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS384-8          	  486945	      2538 ns/op	       144 B/token	     992 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS384-8          	  485656	      2486 ns/op	       144 B/token	     992 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS384-8          	  493219	      2511 ns/op	       144 B/token	     992 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS512
-BenchmarkHMAC/sign-HS512-8          	  476770	      2580 ns/op	       166 B/token	    1024 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS512-8          	  475518	      2565 ns/op	       166 B/token	    1024 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS512-8          	  485038	      2548 ns/op	       166 B/token	    1024 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS512-8          	  481680	      2541 ns/op	       166 B/token	    1024 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS512-8          	  471230	      2528 ns/op	       166 B/token	    1024 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS512-8          	  475410	      2589 ns/op	       166 B/token	    1024 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS512-8          	  477566	      2544 ns/op	       166 B/token	    1024 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS512-8          	  477462	      2563 ns/op	       166 B/token	    1024 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS512-8          	  478851	      2586 ns/op	       166 B/token	    1024 B/op	       7 allocs/op
-BenchmarkHMAC/sign-HS512-8          	  480430	      2576 ns/op	       166 B/token	    1024 B/op	       7 allocs/op
-BenchmarkHMAC/check-HS256
-BenchmarkHMAC/check-HS256-8         	  271273	      4444 ns/op	    1776 B/op	      31 allocs/op
-BenchmarkHMAC/check-HS256-8         	  271143	      4486 ns/op	    1776 B/op	      31 allocs/op
-BenchmarkHMAC/check-HS256-8         	  265221	      4425 ns/op	    1776 B/op	      31 allocs/op
-BenchmarkHMAC/check-HS256-8         	  265225	      4610 ns/op	    1776 B/op	      31 allocs/op
-BenchmarkHMAC/check-HS256-8         	  274165	      4403 ns/op	    1776 B/op	      31 allocs/op
-BenchmarkHMAC/check-HS256-8         	  249432	      4403 ns/op	    1776 B/op	      31 allocs/op
-BenchmarkHMAC/check-HS256-8         	  274155	      4463 ns/op	    1776 B/op	      31 allocs/op
-BenchmarkHMAC/check-HS256-8         	  271560	      4479 ns/op	    1776 B/op	      31 allocs/op
-BenchmarkHMAC/check-HS256-8         	  273298	      4451 ns/op	    1776 B/op	      31 allocs/op
-BenchmarkHMAC/check-HS256-8         	  276334	      4436 ns/op	    1776 B/op	      31 allocs/op
-BenchmarkHMAC/check-HS384
-BenchmarkHMAC/check-HS384-8         	  247094	      4843 ns/op	    2208 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS384-8         	  249052	      4913 ns/op	    2208 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS384-8         	  250429	      4821 ns/op	    2208 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS384-8         	  234007	      4842 ns/op	    2208 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS384-8         	  249198	      4945 ns/op	    2208 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS384-8         	  235496	      5136 ns/op	    2208 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS384-8         	  243786	      5224 ns/op	    2208 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS384-8         	  220557	      5362 ns/op	    2208 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS384-8         	  227278	      5096 ns/op	    2208 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS384-8         	  238856	      5099 ns/op	    2208 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS512
-BenchmarkHMAC/check-HS512-8         	  237085	      5112 ns/op	    2224 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS512-8         	  231734	      4978 ns/op	    2224 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS512-8         	  240301	      5025 ns/op	    2224 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS512-8         	  245226	      5047 ns/op	    2224 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS512-8         	  244626	      4993 ns/op	    2224 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS512-8         	  232137	      4989 ns/op	    2224 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS512-8         	  238968	      4962 ns/op	    2224 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS512-8         	  251060	      5080 ns/op	    2224 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS512-8         	  240346	      5167 ns/op	    2224 B/op	      32 allocs/op
-BenchmarkHMAC/check-HS512-8         	  219544	      5079 ns/op	    2224 B/op	      32 allocs/op
-BenchmarkRSA
-BenchmarkRSA/sign-1024-bit
-BenchmarkRSA/sign-1024-bit-8        	    3500	    356793 ns/op	       251 B/token	   16670 B/op	     106 allocs/op
-BenchmarkRSA/sign-1024-bit-8        	    3492	    358510 ns/op	       251 B/token	   16669 B/op	     106 allocs/op
-BenchmarkRSA/sign-1024-bit-8        	    3322	    352370 ns/op	       251 B/token	   16670 B/op	     106 allocs/op
-BenchmarkRSA/sign-1024-bit-8        	    3428	    359659 ns/op	       251 B/token	   16670 B/op	     106 allocs/op
-BenchmarkRSA/sign-1024-bit-8        	    3330	    352927 ns/op	       251 B/token	   16670 B/op	     106 allocs/op
-BenchmarkRSA/sign-1024-bit-8        	    3288	    358591 ns/op	       251 B/token	   16670 B/op	     106 allocs/op
-BenchmarkRSA/sign-1024-bit-8        	    3242	    341714 ns/op	       251 B/token	   16669 B/op	     106 allocs/op
-BenchmarkRSA/sign-1024-bit-8        	    3637	    333132 ns/op	       251 B/token	   16671 B/op	     106 allocs/op
-BenchmarkRSA/sign-1024-bit-8        	    3308	    336564 ns/op	       251 B/token	   16669 B/op	     106 allocs/op
-BenchmarkRSA/sign-1024-bit-8        	    3459	    340834 ns/op	       251 B/token	   16670 B/op	     106 allocs/op
-BenchmarkRSA/sign-2048-bit
-BenchmarkRSA/sign-2048-bit-8        	     796	   1508938 ns/op	       422 B/token	   31384 B/op	     112 allocs/op
-BenchmarkRSA/sign-2048-bit-8        	     766	   1538446 ns/op	       422 B/token	   31385 B/op	     112 allocs/op
-BenchmarkRSA/sign-2048-bit-8        	     799	   1571478 ns/op	       422 B/token	   31381 B/op	     112 allocs/op
-BenchmarkRSA/sign-2048-bit-8        	     802	   1511354 ns/op	       422 B/token	   31378 B/op	     112 allocs/op
-BenchmarkRSA/sign-2048-bit-8        	     728	   1568254 ns/op	       422 B/token	   31380 B/op	     112 allocs/op
-BenchmarkRSA/sign-2048-bit-8        	     717	   1599300 ns/op	       422 B/token	   31387 B/op	     112 allocs/op
-BenchmarkRSA/sign-2048-bit-8        	     799	   1561490 ns/op	       422 B/token	   31385 B/op	     112 allocs/op
-BenchmarkRSA/sign-2048-bit-8        	     740	   1529221 ns/op	       422 B/token	   31385 B/op	     112 allocs/op
-BenchmarkRSA/sign-2048-bit-8        	     784	   1523888 ns/op	       422 B/token	   31386 B/op	     112 allocs/op
-BenchmarkRSA/sign-2048-bit-8        	     793	   1512601 ns/op	       422 B/token	   31381 B/op	     112 allocs/op
-BenchmarkRSA/sign-4096-bit
-BenchmarkRSA/sign-4096-bit-8        	     134	   8480427 ns/op	       763 B/token	   77535 B/op	     126 allocs/op
-BenchmarkRSA/sign-4096-bit-8        	     139	   8525098 ns/op	       763 B/token	   77500 B/op	     126 allocs/op
-BenchmarkRSA/sign-4096-bit-8        	     138	   8852552 ns/op	       763 B/token	   77594 B/op	     126 allocs/op
-BenchmarkRSA/sign-4096-bit-8        	     142	   8535630 ns/op	       763 B/token	   77541 B/op	     126 allocs/op
-BenchmarkRSA/sign-4096-bit-8        	     141	   8696582 ns/op	       763 B/token	   77579 B/op	     126 allocs/op
-BenchmarkRSA/sign-4096-bit-8        	     139	   8538629 ns/op	       763 B/token	   77589 B/op	     126 allocs/op
-BenchmarkRSA/sign-4096-bit-8        	     141	   8635325 ns/op	       763 B/token	   77572 B/op	     126 allocs/op
-BenchmarkRSA/sign-4096-bit-8        	     129	   9279648 ns/op	       763 B/token	   77510 B/op	     126 allocs/op
-BenchmarkRSA/sign-4096-bit-8        	     129	   9248445 ns/op	       763 B/token	   77571 B/op	     126 allocs/op
-BenchmarkRSA/sign-4096-bit-8        	     129	   9288447 ns/op	       763 B/token	   77600 B/op	     126 allocs/op
-BenchmarkRSA/check-1024-bit
-BenchmarkRSA/check-1024-bit-8       	   38067	     31411 ns/op	    4353 B/op	      39 allocs/op
-BenchmarkRSA/check-1024-bit-8       	   38361	     31306 ns/op	    4353 B/op	      39 allocs/op
-BenchmarkRSA/check-1024-bit-8       	   38347	     29617 ns/op	    4353 B/op	      39 allocs/op
-BenchmarkRSA/check-1024-bit-8       	   39391	     29310 ns/op	    4353 B/op	      39 allocs/op
-BenchmarkRSA/check-1024-bit-8       	   41284	     29520 ns/op	    4353 B/op	      39 allocs/op
-BenchmarkRSA/check-1024-bit-8       	   41493	     29201 ns/op	    4353 B/op	      39 allocs/op
-BenchmarkRSA/check-1024-bit-8       	   39926	     29802 ns/op	    4353 B/op	      39 allocs/op
-BenchmarkRSA/check-1024-bit-8       	   40098	     29338 ns/op	    4353 B/op	      39 allocs/op
-BenchmarkRSA/check-1024-bit-8       	   41242	     29647 ns/op	    4353 B/op	      39 allocs/op
-BenchmarkRSA/check-1024-bit-8       	   40819	     30049 ns/op	    4353 B/op	      39 allocs/op
-BenchmarkRSA/check-2048-bit
-BenchmarkRSA/check-2048-bit-8       	   17989	     64966 ns/op	    7043 B/op	      39 allocs/op
-BenchmarkRSA/check-2048-bit-8       	   17929	     65354 ns/op	    7043 B/op	      39 allocs/op
-BenchmarkRSA/check-2048-bit-8       	   18078	     66588 ns/op	    7043 B/op	      39 allocs/op
-BenchmarkRSA/check-2048-bit-8       	   18616	     65458 ns/op	    7043 B/op	      39 allocs/op
-BenchmarkRSA/check-2048-bit-8       	   18205	     66562 ns/op	    7043 B/op	      39 allocs/op
-BenchmarkRSA/check-2048-bit-8       	   17889	     66019 ns/op	    7043 B/op	      39 allocs/op
-BenchmarkRSA/check-2048-bit-8       	   18462	     65736 ns/op	    7043 B/op	      39 allocs/op
-BenchmarkRSA/check-2048-bit-8       	   18367	     67208 ns/op	    7043 B/op	      39 allocs/op
-BenchmarkRSA/check-2048-bit-8       	   18433	     65960 ns/op	    7043 B/op	      39 allocs/op
-BenchmarkRSA/check-2048-bit-8       	   18466	     66845 ns/op	    7043 B/op	      39 allocs/op
-BenchmarkRSA/check-4096-bit
-BenchmarkRSA/check-4096-bit-8       	    6787	    177713 ns/op	   17099 B/op	      40 allocs/op
-BenchmarkRSA/check-4096-bit-8       	    6970	    174786 ns/op	   17102 B/op	      40 allocs/op
-BenchmarkRSA/check-4096-bit-8       	    6946	    174112 ns/op	   17102 B/op	      40 allocs/op
-BenchmarkRSA/check-4096-bit-8       	    6920	    173041 ns/op	   17103 B/op	      40 allocs/op
-BenchmarkRSA/check-4096-bit-8       	    6367	    180781 ns/op	   17102 B/op	      40 allocs/op
-BenchmarkRSA/check-4096-bit-8       	    6920	    173150 ns/op	   17102 B/op	      40 allocs/op
-BenchmarkRSA/check-4096-bit-8       	    6925	    174389 ns/op	   17101 B/op	      40 allocs/op
-BenchmarkRSA/check-4096-bit-8       	    7071	    175507 ns/op	   17102 B/op	      40 allocs/op
-BenchmarkRSA/check-4096-bit-8       	    6736	    179094 ns/op	   17103 B/op	      40 allocs/op
-BenchmarkRSA/check-4096-bit-8       	    6937	    174690 ns/op	   17101 B/op	      40 allocs/op
-Benchmark_Two_ECDSA
-Benchmark_Two_ECDSA/sign-ES256
-Benchmark_Two_ECDSA/sign-ES256-8         	   42921	     28241 ns/op	       173 B/token	    3379 B/op	      42 allocs/op
-Benchmark_Two_ECDSA/sign-ES256-8         	   42430	     27973 ns/op	       173 B/token	    3379 B/op	      42 allocs/op
-Benchmark_Two_ECDSA/sign-ES256-8         	   41886	     29314 ns/op	       173 B/token	    3379 B/op	      42 allocs/op
-Benchmark_Two_ECDSA/sign-ES256-8         	   42416	     28530 ns/op	       173 B/token	    3379 B/op	      42 allocs/op
-Benchmark_Two_ECDSA/sign-ES256-8         	   43118	     28462 ns/op	       173 B/token	    3379 B/op	      42 allocs/op
-Benchmark_Two_ECDSA/sign-ES256-8         	   42374	     28872 ns/op	       173 B/token	    3379 B/op	      42 allocs/op
-Benchmark_Two_ECDSA/sign-ES256-8         	   42039	     28369 ns/op	       173 B/token	    3379 B/op	      42 allocs/op
-Benchmark_Two_ECDSA/sign-ES256-8         	   42210	     28346 ns/op	       173 B/token	    3379 B/op	      42 allocs/op
-Benchmark_Two_ECDSA/sign-ES256-8         	   42067	     28645 ns/op	       173 B/token	    3379 B/op	      42 allocs/op
-Benchmark_Two_ECDSA/sign-ES256-8         	   40795	     28057 ns/op	       173 B/token	    3379 B/op	      42 allocs/op
-Benchmark_Two_ECDSA/sign-ES384
-Benchmark_Two_ECDSA/sign-ES384-8         	     259	   4555466 ns/op	       216 B/token	 1750849 B/op	   14454 allocs/op
-Benchmark_Two_ECDSA/sign-ES384-8         	     261	   4620064 ns/op	       216 B/token	 1748198 B/op	   14433 allocs/op
-Benchmark_Two_ECDSA/sign-ES384-8         	     254	   4608238 ns/op	       216 B/token	 1752551 B/op	   14468 allocs/op
-Benchmark_Two_ECDSA/sign-ES384-8         	     261	   4622145 ns/op	       216 B/token	 1746842 B/op	   14422 allocs/op
-Benchmark_Two_ECDSA/sign-ES384-8         	     264	   4575331 ns/op	       216 B/token	 1745771 B/op	   14414 allocs/op
-Benchmark_Two_ECDSA/sign-ES384-8         	     249	   4581842 ns/op	       216 B/token	 1748235 B/op	   14433 allocs/op
-Benchmark_Two_ECDSA/sign-ES384-8         	     260	   4560852 ns/op	       216 B/token	 1748745 B/op	   14437 allocs/op
-Benchmark_Two_ECDSA/sign-ES384-8         	     261	   4630582 ns/op	       216 B/token	 1742498 B/op	   14388 allocs/op
-Benchmark_Two_ECDSA/sign-ES384-8         	     254	   4616268 ns/op	       216 B/token	 1747925 B/op	   14431 allocs/op
-Benchmark_Two_ECDSA/sign-ES384-8         	     262	   4599992 ns/op	       216 B/token	 1748144 B/op	   14433 allocs/op
-Benchmark_Two_ECDSA/sign-ES512
-Benchmark_Two_ECDSA/sign-ES512-8         	     151	   8075726 ns/op	       262 B/token	 3030603 B/op	   19595 allocs/op
-Benchmark_Two_ECDSA/sign-ES512-8         	     147	   7976664 ns/op	       262 B/token	 3023795 B/op	   19553 allocs/op
-Benchmark_Two_ECDSA/sign-ES512-8         	     150	   8026775 ns/op	       262 B/token	 3029592 B/op	   19590 allocs/op
-Benchmark_Two_ECDSA/sign-ES512-8         	     150	   8088768 ns/op	       262 B/token	 3021235 B/op	   19537 allocs/op
-Benchmark_Two_ECDSA/sign-ES512-8         	     151	   8005248 ns/op	       262 B/token	 3033052 B/op	   19612 allocs/op
-Benchmark_Two_ECDSA/sign-ES512-8         	     151	   8063592 ns/op	       262 B/token	 3031481 B/op	   19600 allocs/op
-Benchmark_Two_ECDSA/sign-ES512-8         	     150	   8133744 ns/op	       262 B/token	 3028383 B/op	   19582 allocs/op
-Benchmark_Two_ECDSA/sign-ES512-8         	     150	   8102603 ns/op	       262 B/token	 3027966 B/op	   19582 allocs/op
-Benchmark_Two_ECDSA/sign-ES512-8         	     148	   8109823 ns/op	       262 B/token	 3033614 B/op	   19615 allocs/op
-Benchmark_Two_ECDSA/sign-ES512-8         	     148	   7984967 ns/op	       262 B/token	 3024032 B/op	   19555 allocs/op
-Benchmark_Two_ECDSA/check-ES256
-Benchmark_Two_ECDSA/check-ES256-8        	   15488	     80292 ns/op	    1248 B/op	      21 allocs/op
-Benchmark_Two_ECDSA/check-ES256-8        	   15531	     78891 ns/op	    1248 B/op	      21 allocs/op
-Benchmark_Two_ECDSA/check-ES256-8        	   15631	     79588 ns/op	    1248 B/op	      21 allocs/op
-Benchmark_Two_ECDSA/check-ES256-8        	   14960	     79945 ns/op	    1248 B/op	      21 allocs/op
-Benchmark_Two_ECDSA/check-ES256-8        	   15500	     78533 ns/op	    1248 B/op	      21 allocs/op
-Benchmark_Two_ECDSA/check-ES256-8        	   15480	     80637 ns/op	    1248 B/op	      21 allocs/op
-Benchmark_Two_ECDSA/check-ES256-8        	   15585	     78474 ns/op	    1248 B/op	      21 allocs/op
-Benchmark_Two_ECDSA/check-ES256-8        	   15327	     79415 ns/op	    1248 B/op	      21 allocs/op
-Benchmark_Two_ECDSA/check-ES256-8        	   15006	     78504 ns/op	    1248 B/op	      21 allocs/op
-Benchmark_Two_ECDSA/check-ES256-8        	   15578	     78337 ns/op	    1248 B/op	      21 allocs/op
-Benchmark_Two_ECDSA/check-ES384
-Benchmark_Two_ECDSA/check-ES384-8        	     133	   9105608 ns/op	 3483014 B/op	   28793 allocs/op
-Benchmark_Two_ECDSA/check-ES384-8        	     133	   9006323 ns/op	 3482960 B/op	   28792 allocs/op
-Benchmark_Two_ECDSA/check-ES384-8        	     133	   9074278 ns/op	 3482995 B/op	   28793 allocs/op
-Benchmark_Two_ECDSA/check-ES384-8        	     129	   9031305 ns/op	 3482997 B/op	   28793 allocs/op
-Benchmark_Two_ECDSA/check-ES384-8        	     132	   9021013 ns/op	 3483002 B/op	   28793 allocs/op
-Benchmark_Two_ECDSA/check-ES384-8        	     133	   9107946 ns/op	 3482984 B/op	   28793 allocs/op
-Benchmark_Two_ECDSA/check-ES384-8        	     132	   8945807 ns/op	 3482973 B/op	   28793 allocs/op
-Benchmark_Two_ECDSA/check-ES384-8        	     132	   9406977 ns/op	 3482971 B/op	   28792 allocs/op
-Benchmark_Two_ECDSA/check-ES384-8        	     130	   8977863 ns/op	 3482996 B/op	   28793 allocs/op
-Benchmark_Two_ECDSA/check-ES384-8        	     132	   8987728 ns/op	 3483003 B/op	   28793 allocs/op
-Benchmark_Two_ECDSA/check-ES512
-Benchmark_Two_ECDSA/check-ES512-8        	      78	  16129063 ns/op	 6097632 B/op	   39457 allocs/op
-Benchmark_Two_ECDSA/check-ES512-8        	      76	  15780160 ns/op	 6097720 B/op	   39458 allocs/op
-Benchmark_Two_ECDSA/check-ES512-8        	      74	  15718734 ns/op	 6097643 B/op	   39457 allocs/op
-Benchmark_Two_ECDSA/check-ES512-8        	      76	  15930868 ns/op	 6097567 B/op	   39456 allocs/op
-Benchmark_Two_ECDSA/check-ES512-8        	      78	  16350359 ns/op	 6097653 B/op	   39457 allocs/op
-Benchmark_Two_ECDSA/check-ES512-8        	      78	  15786596 ns/op	 6097673 B/op	   39457 allocs/op
-Benchmark_Two_ECDSA/check-ES512-8        	      78	  15841175 ns/op	 6097648 B/op	   39457 allocs/op
-Benchmark_Two_ECDSA/check-ES512-8        	      76	  15832878 ns/op	 6097578 B/op	   39456 allocs/op
-Benchmark_Two_ECDSA/check-ES512-8        	      76	  16458447 ns/op	 6097559 B/op	   39456 allocs/op
-Benchmark_Two_ECDSA/check-ES512-8        	      69	  16596487 ns/op	 6097604 B/op	   39457 allocs/op
-Benchmark_Two_EdDSA
-Benchmark_Two_EdDSA/sign-EdDSA
-Benchmark_Two_EdDSA/sign-EdDSA-8         	   22172	     53287 ns/op	       172 B/token	     912 B/op	      11 allocs/op
-Benchmark_Two_EdDSA/sign-EdDSA-8         	   21656	     54945 ns/op	       172 B/token	     912 B/op	      11 allocs/op
-Benchmark_Two_EdDSA/sign-EdDSA-8         	   22875	     53753 ns/op	       172 B/token	     912 B/op	      11 allocs/op
-Benchmark_Two_EdDSA/sign-EdDSA-8         	   22566	     53525 ns/op	       172 B/token	     912 B/op	      11 allocs/op
-Benchmark_Two_EdDSA/sign-EdDSA-8         	   22701	     54785 ns/op	       172 B/token	     912 B/op	      11 allocs/op
-Benchmark_Two_EdDSA/sign-EdDSA-8         	   22789	     53930 ns/op	       172 B/token	     912 B/op	      11 allocs/op
-Benchmark_Two_EdDSA/sign-EdDSA-8         	   22448	     53906 ns/op	       172 B/token	     912 B/op	      11 allocs/op
-Benchmark_Two_EdDSA/sign-EdDSA-8         	   22532	     54766 ns/op	       172 B/token	     912 B/op	      11 allocs/op
-Benchmark_Two_EdDSA/sign-EdDSA-8         	   21973	     52691 ns/op	       172 B/token	     912 B/op	      11 allocs/op
-Benchmark_Two_EdDSA/sign-EdDSA-8         	   22114	     52940 ns/op	       172 B/token	     912 B/op	      11 allocs/op
-Benchmark_Two_EdDSA/check-EdDSA
-Benchmark_Two_EdDSA/check-EdDSA-8        	    8406	    140439 ns/op	     288 B/op	       2 allocs/op
-Benchmark_Two_EdDSA/check-EdDSA-8        	    8632	    134624 ns/op	     288 B/op	       2 allocs/op
-Benchmark_Two_EdDSA/check-EdDSA-8        	    8713	    135818 ns/op	     288 B/op	       2 allocs/op
-Benchmark_Two_EdDSA/check-EdDSA-8        	    8822	    136971 ns/op	     288 B/op	       2 allocs/op
-Benchmark_Two_EdDSA/check-EdDSA-8        	    8553	    139899 ns/op	     288 B/op	       2 allocs/op
-Benchmark_Two_EdDSA/check-EdDSA-8        	    8306	    136093 ns/op	     288 B/op	       2 allocs/op
-Benchmark_Two_EdDSA/check-EdDSA-8        	    8328	    134890 ns/op	     288 B/op	       2 allocs/op
-Benchmark_Two_EdDSA/check-EdDSA-8        	    8626	    136451 ns/op	     288 B/op	       2 allocs/op
-Benchmark_Two_EdDSA/check-EdDSA-8        	    8460	    138619 ns/op	     288 B/op	       2 allocs/op
-Benchmark_Two_EdDSA/check-EdDSA-8        	    8254	    142088 ns/op	     288 B/op	       2 allocs/op
-Benchmark_Two_HMAC
-Benchmark_Two_HMAC/sign-HS256
-Benchmark_Two_HMAC/sign-HS256-8          	  608058	      1995 ns/op	       129 B/token	     400 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS256-8          	  609492	      2011 ns/op	       129 B/token	     400 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS256-8          	  612927	      2023 ns/op	       129 B/token	     400 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS256-8          	  574569	      2054 ns/op	       129 B/token	     400 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS256-8          	  575665	      2000 ns/op	       129 B/token	     400 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS256-8          	  527732	      2026 ns/op	       129 B/token	     400 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS256-8          	  573272	      1995 ns/op	       129 B/token	     400 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS256-8          	  619939	      2037 ns/op	       129 B/token	     400 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS256-8          	  579796	      2009 ns/op	       129 B/token	     400 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS256-8          	  611445	      2009 ns/op	       129 B/token	     400 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS384
-Benchmark_Two_HMAC/sign-HS384-8          	  572158	      2203 ns/op	       150 B/token	     432 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS384-8          	  589096	      2168 ns/op	       150 B/token	     432 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS384-8          	  483124	      2161 ns/op	       150 B/token	     432 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS384-8          	  561234	      2186 ns/op	       150 B/token	     432 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS384-8          	  511138	      2187 ns/op	       150 B/token	     432 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS384-8          	  549103	      2230 ns/op	       150 B/token	     432 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS384-8          	  568141	      2166 ns/op	       150 B/token	     432 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS384-8          	  572473	      2184 ns/op	       150 B/token	     432 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS384-8          	  554942	      2194 ns/op	       150 B/token	     432 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS384-8          	  576788	      2207 ns/op	       150 B/token	     432 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS512
-Benchmark_Two_HMAC/sign-HS512-8          	  523425	      2274 ns/op	       172 B/token	     464 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS512-8          	  482091	      2204 ns/op	       172 B/token	     464 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS512-8          	  524997	      2209 ns/op	       172 B/token	     464 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS512-8          	  539130	      2232 ns/op	       172 B/token	     464 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS512-8          	  494846	      2235 ns/op	       172 B/token	     464 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS512-8          	  552541	      2239 ns/op	       172 B/token	     464 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS512-8          	  577328	      2205 ns/op	       172 B/token	     464 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS512-8          	  549482	      2276 ns/op	       172 B/token	     464 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS512-8          	  541707	      2210 ns/op	       172 B/token	     464 B/op	       6 allocs/op
-Benchmark_Two_HMAC/sign-HS512-8          	  562276	      2206 ns/op	       172 B/token	     464 B/op	       6 allocs/op
-Benchmark_Two_HMAC/check-HS256
-Benchmark_Two_HMAC/check-HS256-8         	 1000000	      1067 ns/op	      32 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS256-8         	 1000000	      1086 ns/op	      32 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS256-8         	  942813	      1196 ns/op	      32 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS256-8         	 1000000	      1107 ns/op	      32 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS256-8         	 1000000	      1050 ns/op	      32 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS256-8         	 1000000	      1105 ns/op	      32 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS256-8         	 1000000	      1109 ns/op	      32 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS256-8         	 1000000	      1084 ns/op	      32 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS256-8         	 1000000	      1079 ns/op	      32 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS256-8         	 1000000	      1106 ns/op	      32 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS384
-Benchmark_Two_HMAC/check-HS384-8         	 1000000	      1195 ns/op	      48 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS384-8         	  919600	      1165 ns/op	      48 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS384-8         	  885747	      1207 ns/op	      48 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS384-8         	 1000000	      1113 ns/op	      48 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS384-8         	 1000000	      1207 ns/op	      48 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS384-8         	 1000000	      1238 ns/op	      48 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS384-8         	 1008692	      1206 ns/op	      48 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS384-8         	 1000000	      1177 ns/op	      48 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS384-8         	 1000000	      1179 ns/op	      48 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS384-8         	  892116	      1189 ns/op	      48 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS512
-Benchmark_Two_HMAC/check-HS512-8         	 1000000	      1218 ns/op	      64 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS512-8         	 1000000	      1199 ns/op	      64 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS512-8         	  877192	      1202 ns/op	      64 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS512-8         	  934578	      1224 ns/op	      64 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS512-8         	  865647	      1197 ns/op	      64 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS512-8         	 1000000	      1226 ns/op	      64 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS512-8         	  858649	      1197 ns/op	      64 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS512-8         	 1000000	      1196 ns/op	      64 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS512-8         	  875870	      1192 ns/op	      64 B/op	       1 allocs/op
-Benchmark_Two_HMAC/check-HS512-8         	 1000000	      1193 ns/op	      64 B/op	       1 allocs/op
-Benchmark_Two_RSA
-Benchmark_Two_RSA/sign-1024-bit
-Benchmark_Two_RSA/sign-1024-bit-8        	    3603	    335667 ns/op	       257 B/token	   16930 B/op	     110 allocs/op
-Benchmark_Two_RSA/sign-1024-bit-8        	    3685	    341686 ns/op	       257 B/token	   16931 B/op	     110 allocs/op
-Benchmark_Two_RSA/sign-1024-bit-8        	    3636	    332479 ns/op	       257 B/token	   16929 B/op	     110 allocs/op
-Benchmark_Two_RSA/sign-1024-bit-8        	    3630	    335346 ns/op	       257 B/token	   16931 B/op	     110 allocs/op
-Benchmark_Two_RSA/sign-1024-bit-8        	    3650	    330052 ns/op	       257 B/token	   16930 B/op	     110 allocs/op
-Benchmark_Two_RSA/sign-1024-bit-8        	    3408	    341302 ns/op	       257 B/token	   16929 B/op	     110 allocs/op
-Benchmark_Two_RSA/sign-1024-bit-8        	    3607	    327416 ns/op	       257 B/token	   16929 B/op	     110 allocs/op
-Benchmark_Two_RSA/sign-1024-bit-8        	    3651	    335998 ns/op	       257 B/token	   16929 B/op	     110 allocs/op
-Benchmark_Two_RSA/sign-1024-bit-8        	    3633	    336152 ns/op	       257 B/token	   16931 B/op	     110 allocs/op
-Benchmark_Two_RSA/sign-1024-bit-8        	    3638	    338619 ns/op	       257 B/token	   16931 B/op	     110 allocs/op
-Benchmark_Two_RSA/sign-2048-bit
-Benchmark_Two_RSA/sign-2048-bit-8        	     804	   1537276 ns/op	       428 B/token	   31618 B/op	     116 allocs/op
-Benchmark_Two_RSA/sign-2048-bit-8        	     798	   1529747 ns/op	       428 B/token	   31614 B/op	     116 allocs/op
-Benchmark_Two_RSA/sign-2048-bit-8        	     798	   1519585 ns/op	       428 B/token	   31613 B/op	     116 allocs/op
-Benchmark_Two_RSA/sign-2048-bit-8        	     796	   1574257 ns/op	       428 B/token	   31614 B/op	     116 allocs/op
-Benchmark_Two_RSA/sign-2048-bit-8        	     783	   1524694 ns/op	       428 B/token	   31610 B/op	     116 allocs/op
-Benchmark_Two_RSA/sign-2048-bit-8        	     754	   1546075 ns/op	       428 B/token	   31620 B/op	     116 allocs/op
-Benchmark_Two_RSA/sign-2048-bit-8        	     792	   1568068 ns/op	       428 B/token	   31622 B/op	     116 allocs/op
-Benchmark_Two_RSA/sign-2048-bit-8        	     720	   1532242 ns/op	       428 B/token	   31613 B/op	     116 allocs/op
-Benchmark_Two_RSA/sign-2048-bit-8        	     774	   1570903 ns/op	       428 B/token	   31618 B/op	     116 allocs/op
-Benchmark_Two_RSA/sign-2048-bit-8        	     712	   1522425 ns/op	       428 B/token	   31618 B/op	     116 allocs/op
-Benchmark_Two_RSA/sign-4096-bit
-Benchmark_Two_RSA/sign-4096-bit-8        	     140	   8744262 ns/op	       769 B/token	   78044 B/op	     131 allocs/op
-Benchmark_Two_RSA/sign-4096-bit-8        	     139	   8441205 ns/op	       769 B/token	   77902 B/op	     130 allocs/op
-Benchmark_Two_RSA/sign-4096-bit-8        	     138	   8692048 ns/op	       769 B/token	   77933 B/op	     130 allocs/op
-Benchmark_Two_RSA/sign-4096-bit-8        	     138	   8505439 ns/op	       769 B/token	   78024 B/op	     131 allocs/op
-Benchmark_Two_RSA/sign-4096-bit-8        	     140	   8413392 ns/op	       769 B/token	   77903 B/op	     130 allocs/op
-Benchmark_Two_RSA/sign-4096-bit-8        	     138	   8536944 ns/op	       769 B/token	   77934 B/op	     130 allocs/op
-Benchmark_Two_RSA/sign-4096-bit-8        	     140	   8380589 ns/op	       769 B/token	   77880 B/op	     130 allocs/op
-Benchmark_Two_RSA/sign-4096-bit-8        	     138	   8698682 ns/op	       769 B/token	   77940 B/op	     130 allocs/op
-Benchmark_Two_RSA/sign-4096-bit-8        	     140	   8439881 ns/op	       769 B/token	   77932 B/op	     130 allocs/op
-Benchmark_Two_RSA/sign-4096-bit-8        	     140	   8473446 ns/op	       769 B/token	   77904 B/op	     130 allocs/op
-Benchmark_Two_RSA/check-1024-bit
-Benchmark_Two_RSA/check-1024-bit-8       	   47180	     26542 ns/op	    2905 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-1024-bit-8       	   46390	     26004 ns/op	    2905 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-1024-bit-8       	   47149	     25914 ns/op	    2905 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-1024-bit-8       	   46054	     26349 ns/op	    2905 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-1024-bit-8       	   45702	     25856 ns/op	    2905 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-1024-bit-8       	   45156	     25855 ns/op	    2905 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-1024-bit-8       	   47131	     25930 ns/op	    2905 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-1024-bit-8       	   43353	     26082 ns/op	    2905 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-1024-bit-8       	   47188	     26006 ns/op	    2905 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-1024-bit-8       	   46683	     26257 ns/op	    2905 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-2048-bit
-Benchmark_Two_RSA/check-2048-bit-8       	   19288	     64438 ns/op	    5466 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-2048-bit-8       	   18978	     64096 ns/op	    5466 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-2048-bit-8       	   19660	     61451 ns/op	    5466 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-2048-bit-8       	   18284	     61760 ns/op	    5466 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-2048-bit-8       	   19208	     61882 ns/op	    5466 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-2048-bit-8       	   18673	     64228 ns/op	    5466 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-2048-bit-8       	   19372	     61534 ns/op	    5466 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-2048-bit-8       	   19456	     62002 ns/op	    5466 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-2048-bit-8       	   19120	     63665 ns/op	    5466 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-2048-bit-8       	   19162	     63947 ns/op	    5466 B/op	      13 allocs/op
-Benchmark_Two_RSA/check-4096-bit
-Benchmark_Two_RSA/check-4096-bit-8       	    7164	    170919 ns/op	   15265 B/op	      14 allocs/op
-Benchmark_Two_RSA/check-4096-bit-8       	    6502	    172443 ns/op	   15266 B/op	      14 allocs/op
-Benchmark_Two_RSA/check-4096-bit-8       	    6940	    172406 ns/op	   15265 B/op	      14 allocs/op
-Benchmark_Two_RSA/check-4096-bit-8       	    7398	    168805 ns/op	   15267 B/op	      14 allocs/op
-Benchmark_Two_RSA/check-4096-bit-8       	    7141	    168879 ns/op	   15266 B/op	      14 allocs/op
-Benchmark_Two_RSA/check-4096-bit-8       	    6915	    170396 ns/op	   15266 B/op	      14 allocs/op
-Benchmark_Two_RSA/check-4096-bit-8       	    6550	    170324 ns/op	   15262 B/op	      14 allocs/op
-Benchmark_Two_RSA/check-4096-bit-8       	    7204	    169220 ns/op	   15267 B/op	      14 allocs/op
-Benchmark_Two_RSA/check-4096-bit-8       	    7122	    167289 ns/op	   15265 B/op	      14 allocs/op
-Benchmark_Two_RSA/check-4096-bit-8       	    7130	    171116 ns/op	   15265 B/op	      14 allocs/op
-PASS
+BenchmarkECDSA/sign-ES256-4         	   44140	     27132 ns/op	    3041 B/op	      35 allocs/op
+BenchmarkECDSA/sign-ES256-4         	   43741	     27124 ns/op	    3041 B/op	      35 allocs/op
+BenchmarkECDSA/sign-ES256-4         	   44017	     27188 ns/op	    3041 B/op	      35 allocs/op
+BenchmarkECDSA/sign-ES256-4         	   43702	     27372 ns/op	    3041 B/op	      35 allocs/op
+BenchmarkECDSA/sign-ES256-4         	   44215	     27228 ns/op	    3041 B/op	      35 allocs/op
+BenchmarkECDSA/sign-ES256-4         	   44071	     27179 ns/op	    3041 B/op	      35 allocs/op
+BenchmarkECDSA/sign-ES256-4         	   44391	     27253 ns/op	    3041 B/op	      35 allocs/op
+BenchmarkECDSA/sign-ES256-4         	   43939	     27263 ns/op	    3041 B/op	      35 allocs/op
+BenchmarkECDSA/sign-ES256-4         	   44337	     27225 ns/op	    3041 B/op	      35 allocs/op
+BenchmarkECDSA/sign-ES256-4         	   43934	     27306 ns/op	    3041 B/op	      35 allocs/op
+BenchmarkECDSA/sign-ES384-4         	     273	   4353928 ns/op	 1745718 B/op	   14415 allocs/op
+BenchmarkECDSA/sign-ES384-4         	     276	   4345273 ns/op	 1746630 B/op	   14423 allocs/op
+BenchmarkECDSA/sign-ES384-4         	     276	   4353185 ns/op	 1744194 B/op	   14404 allocs/op
+BenchmarkECDSA/sign-ES384-4         	     276	   4357240 ns/op	 1748600 B/op	   14440 allocs/op
+BenchmarkECDSA/sign-ES384-4         	     276	   4345815 ns/op	 1745506 B/op	   14414 allocs/op
+BenchmarkECDSA/sign-ES384-4         	     276	   4334704 ns/op	 1747112 B/op	   14427 allocs/op
+BenchmarkECDSA/sign-ES384-4         	     276	   4342729 ns/op	 1746590 B/op	   14422 allocs/op
+BenchmarkECDSA/sign-ES384-4         	     276	   4344903 ns/op	 1744832 B/op	   14408 allocs/op
+BenchmarkECDSA/sign-ES384-4         	     273	   4341334 ns/op	 1743824 B/op	   14401 allocs/op
+BenchmarkECDSA/sign-ES384-4         	     274	   4338070 ns/op	 1747799 B/op	   14432 allocs/op
+BenchmarkECDSA/sign-ES512-4         	     158	   7519380 ns/op	 3028651 B/op	   19588 allocs/op
+BenchmarkECDSA/sign-ES512-4         	     159	   7554183 ns/op	 3018273 B/op	   19522 allocs/op
+BenchmarkECDSA/sign-ES512-4         	     159	   7513700 ns/op	 3018267 B/op	   19522 allocs/op
+BenchmarkECDSA/sign-ES512-4         	     158	   7623823 ns/op	 3022544 B/op	   19550 allocs/op
+BenchmarkECDSA/sign-ES512-4         	     159	   7551460 ns/op	 3027987 B/op	   19584 allocs/op
+BenchmarkECDSA/sign-ES512-4         	     158	   7513787 ns/op	 3017991 B/op	   19520 allocs/op
+BenchmarkECDSA/sign-ES512-4         	     157	   7501939 ns/op	 3025816 B/op	   19569 allocs/op
+BenchmarkECDSA/sign-ES512-4         	     158	   7536635 ns/op	 3024843 B/op	   19562 allocs/op
+BenchmarkECDSA/sign-ES512-4         	     159	   7564301 ns/op	 3031836 B/op	   19607 allocs/op
+BenchmarkECDSA/sign-ES512-4         	     158	   7538153 ns/op	 3024873 B/op	   19564 allocs/op
+BenchmarkECDSA/check-ES256-4        	   14733	     81142 ns/op	    2592 B/op	      46 allocs/op
+BenchmarkECDSA/check-ES256-4        	   14695	     81182 ns/op	    2592 B/op	      46 allocs/op
+BenchmarkECDSA/check-ES256-4        	   14592	     81854 ns/op	    2592 B/op	      46 allocs/op
+BenchmarkECDSA/check-ES256-4        	   14758	     81911 ns/op	    2592 B/op	      46 allocs/op
+BenchmarkECDSA/check-ES256-4        	   14706	     81368 ns/op	    2592 B/op	      46 allocs/op
+BenchmarkECDSA/check-ES256-4        	   14707	     81061 ns/op	    2592 B/op	      46 allocs/op
+BenchmarkECDSA/check-ES256-4        	   14776	     81421 ns/op	    2592 B/op	      46 allocs/op
+BenchmarkECDSA/check-ES256-4        	   14607	     81485 ns/op	    2592 B/op	      46 allocs/op
+BenchmarkECDSA/check-ES256-4        	   14667	     81628 ns/op	    2592 B/op	      46 allocs/op
+BenchmarkECDSA/check-ES256-4        	   14726	     81826 ns/op	    2592 B/op	      46 allocs/op
+BenchmarkECDSA/check-ES384-4        	     139	   8571053 ns/op	 3495389 B/op	   28901 allocs/op
+BenchmarkECDSA/check-ES384-4        	     139	   8594384 ns/op	 3495388 B/op	   28901 allocs/op
+BenchmarkECDSA/check-ES384-4        	     139	   8599844 ns/op	 3495404 B/op	   28901 allocs/op
+BenchmarkECDSA/check-ES384-4        	     139	   8570033 ns/op	 3495371 B/op	   28901 allocs/op
+BenchmarkECDSA/check-ES384-4        	     139	   8620459 ns/op	 3495388 B/op	   28901 allocs/op
+BenchmarkECDSA/check-ES384-4        	     139	   8562239 ns/op	 3495375 B/op	   28901 allocs/op
+BenchmarkECDSA/check-ES384-4        	     139	   8567536 ns/op	 3495366 B/op	   28901 allocs/op
+BenchmarkECDSA/check-ES384-4        	     139	   8573774 ns/op	 3495340 B/op	   28901 allocs/op
+BenchmarkECDSA/check-ES384-4        	     139	   8585791 ns/op	 3495378 B/op	   28901 allocs/op
+BenchmarkECDSA/check-ES384-4        	     139	   8596236 ns/op	 3495391 B/op	   28901 allocs/op
+BenchmarkECDSA/check-ES512-4        	      79	  15175368 ns/op	 6252340 B/op	   40415 allocs/op
+BenchmarkECDSA/check-ES512-4        	      78	  15162709 ns/op	 6252339 B/op	   40415 allocs/op
+BenchmarkECDSA/check-ES512-4        	      79	  15210603 ns/op	 6252317 B/op	   40415 allocs/op
+BenchmarkECDSA/check-ES512-4        	      79	  15207382 ns/op	 6252259 B/op	   40414 allocs/op
+BenchmarkECDSA/check-ES512-4        	      79	  15207562 ns/op	 6252345 B/op	   40415 allocs/op
+BenchmarkECDSA/check-ES512-4        	      80	  15193514 ns/op	 6252327 B/op	   40415 allocs/op
+BenchmarkECDSA/check-ES512-4        	      80	  15203013 ns/op	 6252306 B/op	   40414 allocs/op
+BenchmarkECDSA/check-ES512-4        	      74	  15203490 ns/op	 6252276 B/op	   40414 allocs/op
+BenchmarkECDSA/check-ES512-4        	      80	  15224785 ns/op	 6252301 B/op	   40414 allocs/op
+BenchmarkECDSA/check-ES512-4        	      80	  15268534 ns/op	 6252306 B/op	   40414 allocs/op
+BenchmarkEdDSA/sign-EdDSA-4         	   23238	     51691 ns/op	     672 B/op	       7 allocs/op
+BenchmarkEdDSA/sign-EdDSA-4         	   23275	     51722 ns/op	     672 B/op	       7 allocs/op
+BenchmarkEdDSA/sign-EdDSA-4         	   23077	     51447 ns/op	     672 B/op	       7 allocs/op
+BenchmarkEdDSA/sign-EdDSA-4         	   23179	     51482 ns/op	     672 B/op	       7 allocs/op
+BenchmarkEdDSA/sign-EdDSA-4         	   23202	     51555 ns/op	     672 B/op	       7 allocs/op
+BenchmarkEdDSA/sign-EdDSA-4         	   23042	     51298 ns/op	     672 B/op	       7 allocs/op
+BenchmarkEdDSA/sign-EdDSA-4         	   23282	     51694 ns/op	     672 B/op	       7 allocs/op
+BenchmarkEdDSA/sign-EdDSA-4         	   23096	     51484 ns/op	     672 B/op	       7 allocs/op
+BenchmarkEdDSA/sign-EdDSA-4         	   23018	     51621 ns/op	     672 B/op	       7 allocs/op
+BenchmarkEdDSA/sign-EdDSA-4         	   22995	     51505 ns/op	     672 B/op	       7 allocs/op
+BenchmarkEdDSA/check-EdDSA-4        	    8583	    135826 ns/op	    1664 B/op	      28 allocs/op
+BenchmarkEdDSA/check-EdDSA-4        	    8599	    136615 ns/op	    1664 B/op	      28 allocs/op
+BenchmarkEdDSA/check-EdDSA-4        	    8689	    135513 ns/op	    1664 B/op	      28 allocs/op
+BenchmarkEdDSA/check-EdDSA-4        	    8689	    136208 ns/op	    1664 B/op	      28 allocs/op
+BenchmarkEdDSA/check-EdDSA-4        	    8620	    135684 ns/op	    1664 B/op	      28 allocs/op
+BenchmarkEdDSA/check-EdDSA-4        	    8659	    135701 ns/op	    1664 B/op	      28 allocs/op
+BenchmarkEdDSA/check-EdDSA-4        	    8635	    135502 ns/op	    1664 B/op	      28 allocs/op
+BenchmarkEdDSA/check-EdDSA-4        	    8628	    135697 ns/op	    1664 B/op	      28 allocs/op
+BenchmarkEdDSA/check-EdDSA-4        	    8684	    135397 ns/op	    1664 B/op	      28 allocs/op
+BenchmarkEdDSA/check-EdDSA-4        	    8569	    135954 ns/op	    1664 B/op	      28 allocs/op
+BenchmarkHMAC/sign-HS256-4          	  574184	      2076 ns/op	     656 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS256-4          	  601988	      2074 ns/op	     656 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS256-4          	  567097	      2087 ns/op	     656 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS256-4          	  601323	      2071 ns/op	     656 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS256-4          	  601321	      2087 ns/op	     656 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS256-4          	  602696	      2085 ns/op	     656 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS256-4          	  578547	      2083 ns/op	     656 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS256-4          	  593312	      2073 ns/op	     656 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS256-4          	  550660	      2091 ns/op	     656 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS256-4          	  599139	      2087 ns/op	     656 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS256-reuse-4    	  735151	      1692 ns/op	     176 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS256-reuse-4    	  731523	      1691 ns/op	     176 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS256-reuse-4    	  712212	      1700 ns/op	     176 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS256-reuse-4    	  693099	      1690 ns/op	     176 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS256-reuse-4    	  732876	      1697 ns/op	     176 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS256-reuse-4    	  722893	      1687 ns/op	     176 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS256-reuse-4    	  693987	      1692 ns/op	     176 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS256-reuse-4    	  710841	      1681 ns/op	     176 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS256-reuse-4    	  705448	      1672 ns/op	     176 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS256-reuse-4    	  736112	      1692 ns/op	     176 B/op	       2 allocs/op
+BenchmarkHMAC/check-HS256-4         	  290518	      4194 ns/op	    1808 B/op	      31 allocs/op
+BenchmarkHMAC/check-HS256-4         	  290995	      4182 ns/op	    1808 B/op	      31 allocs/op
+BenchmarkHMAC/check-HS256-4         	  293116	      4174 ns/op	    1808 B/op	      31 allocs/op
+BenchmarkHMAC/check-HS256-4         	  290010	      4184 ns/op	    1808 B/op	      31 allocs/op
+BenchmarkHMAC/check-HS256-4         	  293715	      4192 ns/op	    1808 B/op	      31 allocs/op
+BenchmarkHMAC/check-HS256-4         	  288482	      4196 ns/op	    1808 B/op	      31 allocs/op
+BenchmarkHMAC/check-HS256-4         	  290917	      4173 ns/op	    1808 B/op	      31 allocs/op
+BenchmarkHMAC/check-HS256-4         	  284448	      4181 ns/op	    1808 B/op	      31 allocs/op
+BenchmarkHMAC/check-HS256-4         	  286797	      4187 ns/op	    1808 B/op	      31 allocs/op
+BenchmarkHMAC/check-HS256-4         	  288206	      4179 ns/op	    1808 B/op	      31 allocs/op
+BenchmarkHMAC/check-HS256-reuse-4   	  311389	      3862 ns/op	    1328 B/op	      26 allocs/op
+BenchmarkHMAC/check-HS256-reuse-4   	  314162	      3865 ns/op	    1328 B/op	      26 allocs/op
+BenchmarkHMAC/check-HS256-reuse-4   	  309660	      3854 ns/op	    1328 B/op	      26 allocs/op
+BenchmarkHMAC/check-HS256-reuse-4   	  308284	      3855 ns/op	    1328 B/op	      26 allocs/op
+BenchmarkHMAC/check-HS256-reuse-4   	  312844	      3865 ns/op	    1328 B/op	      26 allocs/op
+BenchmarkHMAC/check-HS256-reuse-4   	  313411	      3847 ns/op	    1328 B/op	      26 allocs/op
+BenchmarkHMAC/check-HS256-reuse-4   	  313644	      3862 ns/op	    1328 B/op	      26 allocs/op
+BenchmarkHMAC/check-HS256-reuse-4   	  310881	      3865 ns/op	    1328 B/op	      26 allocs/op
+BenchmarkHMAC/check-HS256-reuse-4   	  315052	      3847 ns/op	    1328 B/op	      26 allocs/op
+BenchmarkHMAC/check-HS256-reuse-4   	  314665	      3868 ns/op	    1328 B/op	      26 allocs/op
+BenchmarkHMAC/sign-HS384-4          	  518955	      2376 ns/op	    1008 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS384-4          	  483680	      2373 ns/op	    1008 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS384-4          	  526723	      2363 ns/op	    1008 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS384-4          	  528442	      2367 ns/op	    1008 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS384-4          	  514328	      2374 ns/op	    1008 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS384-4          	  509534	      2371 ns/op	    1008 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS384-4          	  496537	      2355 ns/op	    1008 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS384-4          	  495381	      2358 ns/op	    1008 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS384-4          	  494116	      2368 ns/op	    1008 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS384-4          	  526290	      2383 ns/op	    1008 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS384-reuse-4    	  613772	      1844 ns/op	     208 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS384-reuse-4    	  675733	      1819 ns/op	     208 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS384-reuse-4    	  676702	      1833 ns/op	     208 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS384-reuse-4    	  675450	      1815 ns/op	     208 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS384-reuse-4    	  610513	      1835 ns/op	     208 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS384-reuse-4    	  677065	      1809 ns/op	     208 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS384-reuse-4    	  688939	      1831 ns/op	     208 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS384-reuse-4    	  678769	      1812 ns/op	     208 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS384-reuse-4    	  679975	      1856 ns/op	     208 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS384-reuse-4    	  669334	      1845 ns/op	     208 B/op	       2 allocs/op
+BenchmarkHMAC/check-HS384-4         	  268684	      4491 ns/op	    2240 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS384-4         	  268982	      4480 ns/op	    2240 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS384-4         	  270946	      4480 ns/op	    2240 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS384-4         	  271048	      4485 ns/op	    2240 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS384-4         	  270970	      4493 ns/op	    2240 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS384-4         	  271066	      4463 ns/op	    2240 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS384-4         	  269644	      4469 ns/op	    2240 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS384-4         	  273420	      4486 ns/op	    2240 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS384-4         	  267171	      4487 ns/op	    2240 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS384-4         	  272815	      4513 ns/op	    2240 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS384-reuse-4   	  294163	      4027 ns/op	    1440 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS384-reuse-4   	  299084	      4029 ns/op	    1440 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS384-reuse-4   	  296564	      4019 ns/op	    1440 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS384-reuse-4   	  297600	      4014 ns/op	    1440 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS384-reuse-4   	  306146	      4022 ns/op	    1440 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS384-reuse-4   	  299829	      4011 ns/op	    1440 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS384-reuse-4   	  299841	      4016 ns/op	    1440 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS384-reuse-4   	  300091	      4045 ns/op	    1440 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS384-reuse-4   	  300817	      4033 ns/op	    1440 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS384-reuse-4   	  302964	      4034 ns/op	    1440 B/op	      27 allocs/op
+BenchmarkHMAC/sign-HS512-4          	  519621	      2392 ns/op	    1024 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS512-4          	  522447	      2408 ns/op	    1024 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS512-4          	  519499	      2405 ns/op	    1024 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS512-4          	  510924	      2411 ns/op	    1024 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS512-4          	  521194	      2424 ns/op	    1024 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS512-4          	  523537	      2439 ns/op	    1024 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS512-4          	  495433	      2397 ns/op	    1024 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS512-4          	  509062	      2402 ns/op	    1024 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS512-4          	  519495	      2394 ns/op	    1024 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS512-4          	  514281	      2390 ns/op	    1024 B/op	       7 allocs/op
+BenchmarkHMAC/sign-HS512-reuse-4    	  672313	      1848 ns/op	     224 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS512-reuse-4    	  667561	      1877 ns/op	     224 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS512-reuse-4    	  678538	      1852 ns/op	     224 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS512-reuse-4    	  654157	      1893 ns/op	     224 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS512-reuse-4    	  611288	      1887 ns/op	     224 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS512-reuse-4    	  671566	      1883 ns/op	     224 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS512-reuse-4    	  674139	      1862 ns/op	     224 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS512-reuse-4    	  593692	      1878 ns/op	     224 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS512-reuse-4    	  647023	      1848 ns/op	     224 B/op	       2 allocs/op
+BenchmarkHMAC/sign-HS512-reuse-4    	  665840	      1879 ns/op	     224 B/op	       2 allocs/op
+BenchmarkHMAC/check-HS512-4         	  270825	      4575 ns/op	    2272 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS512-4         	  262984	      4550 ns/op	    2272 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS512-4         	  268216	      4561 ns/op	    2272 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS512-4         	  259744	      4545 ns/op	    2272 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS512-4         	  270346	      4553 ns/op	    2272 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS512-4         	  266965	      4560 ns/op	    2272 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS512-4         	  269260	      4555 ns/op	    2272 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS512-4         	  266821	      4542 ns/op	    2272 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS512-4         	  267624	      4555 ns/op	    2272 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS512-4         	  264085	      4537 ns/op	    2272 B/op	      32 allocs/op
+BenchmarkHMAC/check-HS512-reuse-4   	  294198	      4050 ns/op	    1472 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS512-reuse-4   	  295410	      4080 ns/op	    1472 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS512-reuse-4   	  296439	      4108 ns/op	    1472 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS512-reuse-4   	  296523	      4091 ns/op	    1472 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS512-reuse-4   	  300291	      4063 ns/op	    1472 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS512-reuse-4   	  304153	      4072 ns/op	    1472 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS512-reuse-4   	  299365	      4068 ns/op	    1472 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS512-reuse-4   	  299661	      4085 ns/op	    1472 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS512-reuse-4   	  302421	      4064 ns/op	    1472 B/op	      27 allocs/op
+BenchmarkHMAC/check-HS512-reuse-4   	  296756	      4074 ns/op	    1472 B/op	      27 allocs/op
+BenchmarkRSA/sign-1024-bit-4        	    3663	    329105 ns/op	   16664 B/op	     106 allocs/op
+BenchmarkRSA/sign-1024-bit-4        	    3687	    327476 ns/op	   16664 B/op	     106 allocs/op
+BenchmarkRSA/sign-1024-bit-4        	    3682	    327503 ns/op	   16666 B/op	     106 allocs/op
+BenchmarkRSA/sign-1024-bit-4        	    3691	    326781 ns/op	   16664 B/op	     106 allocs/op
+BenchmarkRSA/sign-1024-bit-4        	    3626	    327651 ns/op	   16664 B/op	     106 allocs/op
+BenchmarkRSA/sign-1024-bit-4        	    3679	    328509 ns/op	   16665 B/op	     106 allocs/op
+BenchmarkRSA/sign-1024-bit-4        	    3439	    336110 ns/op	   16665 B/op	     106 allocs/op
+BenchmarkRSA/sign-1024-bit-4        	    3660	    326656 ns/op	   16664 B/op	     106 allocs/op
+BenchmarkRSA/sign-1024-bit-4        	    3710	    329714 ns/op	   16665 B/op	     106 allocs/op
+BenchmarkRSA/sign-1024-bit-4        	    3672	    326810 ns/op	   16663 B/op	     106 allocs/op
+BenchmarkRSA/sign-2048-bit-4        	     796	   1488495 ns/op	   31373 B/op	     112 allocs/op
+BenchmarkRSA/sign-2048-bit-4        	     806	   1486369 ns/op	   31367 B/op	     112 allocs/op
+BenchmarkRSA/sign-2048-bit-4        	     805	   1487492 ns/op	   31373 B/op	     112 allocs/op
+BenchmarkRSA/sign-2048-bit-4        	     807	   1484107 ns/op	   31378 B/op	     112 allocs/op
+BenchmarkRSA/sign-2048-bit-4        	     806	   1491529 ns/op	   31368 B/op	     112 allocs/op
+BenchmarkRSA/sign-2048-bit-4        	     810	   1487369 ns/op	   31372 B/op	     112 allocs/op
+BenchmarkRSA/sign-2048-bit-4        	     789	   1482106 ns/op	   31368 B/op	     112 allocs/op
+BenchmarkRSA/sign-2048-bit-4        	     796	   1490520 ns/op	   31373 B/op	     112 allocs/op
+BenchmarkRSA/sign-2048-bit-4        	     811	   1489705 ns/op	   31372 B/op	     112 allocs/op
+BenchmarkRSA/sign-2048-bit-4        	     806	   1488249 ns/op	   31371 B/op	     112 allocs/op
+BenchmarkRSA/sign-4096-bit-4        	     147	   8098913 ns/op	   77485 B/op	     126 allocs/op
+BenchmarkRSA/sign-4096-bit-4        	     146	   8124505 ns/op	   77603 B/op	     126 allocs/op
+BenchmarkRSA/sign-4096-bit-4        	     146	   8081192 ns/op	   77546 B/op	     126 allocs/op
+BenchmarkRSA/sign-4096-bit-4        	     146	   8124603 ns/op	   77569 B/op	     126 allocs/op
+BenchmarkRSA/sign-4096-bit-4        	     146	   8086885 ns/op	   77518 B/op	     126 allocs/op
+BenchmarkRSA/sign-4096-bit-4        	     146	   8097180 ns/op	   77570 B/op	     126 allocs/op
+BenchmarkRSA/sign-4096-bit-4        	     146	   8124281 ns/op	   77572 B/op	     126 allocs/op
+BenchmarkRSA/sign-4096-bit-4        	     147	   8125486 ns/op	   77542 B/op	     126 allocs/op
+BenchmarkRSA/sign-4096-bit-4        	     146	   8099951 ns/op	   77540 B/op	     126 allocs/op
+BenchmarkRSA/sign-4096-bit-4        	     147	   8154763 ns/op	   77539 B/op	     126 allocs/op
+BenchmarkRSA/check-1024-bit-4       	   41982	     28508 ns/op	    4321 B/op	      38 allocs/op
+BenchmarkRSA/check-1024-bit-4       	   41896	     28549 ns/op	    4321 B/op	      38 allocs/op
+BenchmarkRSA/check-1024-bit-4       	   42031	     28529 ns/op	    4321 B/op	      38 allocs/op
+BenchmarkRSA/check-1024-bit-4       	   42025	     28532 ns/op	    4321 B/op	      38 allocs/op
+BenchmarkRSA/check-1024-bit-4       	   41671	     28557 ns/op	    4321 B/op	      38 allocs/op
+BenchmarkRSA/check-1024-bit-4       	   42051	     28492 ns/op	    4321 B/op	      38 allocs/op
+BenchmarkRSA/check-1024-bit-4       	   42631	     28533 ns/op	    4321 B/op	      38 allocs/op
+BenchmarkRSA/check-1024-bit-4       	   42178	     28566 ns/op	    4320 B/op	      38 allocs/op
+BenchmarkRSA/check-1024-bit-4       	   42198	     28428 ns/op	    4321 B/op	      38 allocs/op
+BenchmarkRSA/check-1024-bit-4       	   41929	     28509 ns/op	    4320 B/op	      38 allocs/op
+BenchmarkRSA/check-2048-bit-4       	   18933	     63606 ns/op	    7073 B/op	      38 allocs/op
+BenchmarkRSA/check-2048-bit-4       	   18910	     63355 ns/op	    7073 B/op	      38 allocs/op
+BenchmarkRSA/check-2048-bit-4       	   18916	     63581 ns/op	    7074 B/op	      38 allocs/op
+BenchmarkRSA/check-2048-bit-4       	   18858	     63466 ns/op	    7073 B/op	      38 allocs/op
+BenchmarkRSA/check-2048-bit-4       	   18958	     63473 ns/op	    7074 B/op	      38 allocs/op
+BenchmarkRSA/check-2048-bit-4       	   18962	     63321 ns/op	    7073 B/op	      38 allocs/op
+BenchmarkRSA/check-2048-bit-4       	   18985	     63549 ns/op	    7073 B/op	      38 allocs/op
+BenchmarkRSA/check-2048-bit-4       	   18943	     63360 ns/op	    7073 B/op	      38 allocs/op
+BenchmarkRSA/check-2048-bit-4       	   18849	     63260 ns/op	    7074 B/op	      38 allocs/op
+BenchmarkRSA/check-2048-bit-4       	   18926	     63292 ns/op	    7073 B/op	      38 allocs/op
+BenchmarkRSA/check-4096-bit-4       	    7293	    169548 ns/op	   17190 B/op	      39 allocs/op
+BenchmarkRSA/check-4096-bit-4       	    7195	    168671 ns/op	   17192 B/op	      39 allocs/op
+BenchmarkRSA/check-4096-bit-4       	    7264	    168487 ns/op	   17190 B/op	      39 allocs/op
+BenchmarkRSA/check-4096-bit-4       	    7208	    168197 ns/op	   17190 B/op	      39 allocs/op
+BenchmarkRSA/check-4096-bit-4       	    7220	    169058 ns/op	   17189 B/op	      39 allocs/op
+BenchmarkRSA/check-4096-bit-4       	    7206	    167973 ns/op	   17190 B/op	      39 allocs/op
+BenchmarkRSA/check-4096-bit-4       	    7173	    168865 ns/op	   17189 B/op	      39 allocs/op
+BenchmarkRSA/check-4096-bit-4       	    7268	    169505 ns/op	   17189 B/op	      39 allocs/op
+BenchmarkRSA/check-4096-bit-4       	    7309	    168715 ns/op	   17191 B/op	      39 allocs/op
+BenchmarkRSA/check-4096-bit-4       	    7120	    169042 ns/op	   17191 B/op	      39 allocs/op
+Benchmark_Two_ECDSA/sign-ES256-4         	   43630	     27645 ns/op	    3377 B/op	      42 allocs/op
+Benchmark_Two_ECDSA/sign-ES256-4         	   43468	     27555 ns/op	    3377 B/op	      42 allocs/op
+Benchmark_Two_ECDSA/sign-ES256-4         	   43297	     27643 ns/op	    3377 B/op	      42 allocs/op
+Benchmark_Two_ECDSA/sign-ES256-4         	   43406	     27651 ns/op	    3377 B/op	      42 allocs/op
+Benchmark_Two_ECDSA/sign-ES256-4         	   43531	     27631 ns/op	    3377 B/op	      42 allocs/op
+Benchmark_Two_ECDSA/sign-ES256-4         	   43755	     27614 ns/op	    3377 B/op	      42 allocs/op
+Benchmark_Two_ECDSA/sign-ES256-4         	   43609	     27494 ns/op	    3377 B/op	      42 allocs/op
+Benchmark_Two_ECDSA/sign-ES256-4         	   43710	     27558 ns/op	    3377 B/op	      42 allocs/op
+Benchmark_Two_ECDSA/sign-ES256-4         	   43551	     27615 ns/op	    3377 B/op	      42 allocs/op
+Benchmark_Two_ECDSA/sign-ES256-4         	   43398	     27654 ns/op	    3377 B/op	      42 allocs/op
+Benchmark_Two_ECDSA/sign-ES384-4         	     274	   4352398 ns/op	 1745111 B/op	   14414 allocs/op
+Benchmark_Two_ECDSA/sign-ES384-4         	     276	   4369456 ns/op	 1748271 B/op	   14439 allocs/op
+Benchmark_Two_ECDSA/sign-ES384-4         	     276	   4364631 ns/op	 1745428 B/op	   14415 allocs/op
+Benchmark_Two_ECDSA/sign-ES384-4         	     273	   4356285 ns/op	 1743959 B/op	   14405 allocs/op
+Benchmark_Two_ECDSA/sign-ES384-4         	     273	   4357675 ns/op	 1744166 B/op	   14405 allocs/op
+Benchmark_Two_ECDSA/sign-ES384-4         	     273	   4371599 ns/op	 1747240 B/op	   14431 allocs/op
+Benchmark_Two_ECDSA/sign-ES384-4         	     274	   4352699 ns/op	 1740794 B/op	   14378 allocs/op
+Benchmark_Two_ECDSA/sign-ES384-4         	     274	   4369646 ns/op	 1749274 B/op	   14447 allocs/op
+Benchmark_Two_ECDSA/sign-ES384-4         	     273	   4432789 ns/op	 1747674 B/op	   14435 allocs/op
+Benchmark_Two_ECDSA/sign-ES384-4         	     274	   4369662 ns/op	 1745640 B/op	   14418 allocs/op
+Benchmark_Two_ECDSA/sign-ES512-4         	     157	   7566837 ns/op	 3027443 B/op	   19584 allocs/op
+Benchmark_Two_ECDSA/sign-ES512-4         	     157	   7618695 ns/op	 3033022 B/op	   19618 allocs/op
+Benchmark_Two_ECDSA/sign-ES512-4         	     158	   7583547 ns/op	 3037940 B/op	   19649 allocs/op
+Benchmark_Two_ECDSA/sign-ES512-4         	     158	   7563231 ns/op	 3028818 B/op	   19592 allocs/op
+Benchmark_Two_ECDSA/sign-ES512-4         	     158	   7536130 ns/op	 3020237 B/op	   19536 allocs/op
+Benchmark_Two_ECDSA/sign-ES512-4         	     157	   7580679 ns/op	 3032167 B/op	   19611 allocs/op
+Benchmark_Two_ECDSA/sign-ES512-4         	     157	   7589721 ns/op	 3025723 B/op	   19571 allocs/op
+Benchmark_Two_ECDSA/sign-ES512-4         	     157	   7550616 ns/op	 3024690 B/op	   19565 allocs/op
+Benchmark_Two_ECDSA/sign-ES512-4         	     158	   7570172 ns/op	 3024227 B/op	   19562 allocs/op
+Benchmark_Two_ECDSA/sign-ES512-4         	     158	   7668683 ns/op	 3028734 B/op	   19591 allocs/op
+--- FAIL: Benchmark_Two_ECDSA/check-ES256
+    bench_test.go:231: jwt: token format is not valid
+--- FAIL: Benchmark_Two_ECDSA/check-ES384
+    bench_test.go:231: jwt: token format is not valid
+Benchmark_Two_ECDSA/check-ES512-4        	      81	  14628609 ns/op	 5960855 B/op	   38598 allocs/op
+Benchmark_Two_ECDSA/check-ES512-4        	      82	  14703036 ns/op	 5960782 B/op	   38597 allocs/op
+Benchmark_Two_ECDSA/check-ES512-4        	      82	  14587035 ns/op	 5960824 B/op	   38597 allocs/op
+Benchmark_Two_ECDSA/check-ES512-4        	      84	  14639043 ns/op	 5960803 B/op	   38597 allocs/op
+Benchmark_Two_ECDSA/check-ES512-4        	      82	  14615112 ns/op	 5960799 B/op	   38597 allocs/op
+Benchmark_Two_ECDSA/check-ES512-4        	      84	  14628379 ns/op	 5960801 B/op	   38597 allocs/op
+Benchmark_Two_ECDSA/check-ES512-4        	      82	  14624164 ns/op	 5960849 B/op	   38598 allocs/op
+Benchmark_Two_ECDSA/check-ES512-4        	      82	  14679616 ns/op	 5960799 B/op	   38597 allocs/op
+Benchmark_Two_ECDSA/check-ES512-4        	      82	  14605232 ns/op	 5960859 B/op	   38598 allocs/op
+Benchmark_Two_ECDSA/check-ES512-4        	      82	  14635417 ns/op	 5960843 B/op	   38598 allocs/op
+--- FAIL: Benchmark_Two_ECDSA
+Benchmark_Two_EdDSA/sign-EdDSA-4         	   22939	     52101 ns/op	     912 B/op	      11 allocs/op
+Benchmark_Two_EdDSA/sign-EdDSA-4         	   22954	     52065 ns/op	     912 B/op	      11 allocs/op
+Benchmark_Two_EdDSA/sign-EdDSA-4         	   22830	     52113 ns/op	     912 B/op	      11 allocs/op
+Benchmark_Two_EdDSA/sign-EdDSA-4         	   22950	     52421 ns/op	     912 B/op	      11 allocs/op
+Benchmark_Two_EdDSA/sign-EdDSA-4         	   23044	     51997 ns/op	     912 B/op	      11 allocs/op
+Benchmark_Two_EdDSA/sign-EdDSA-4         	   23162	     52265 ns/op	     912 B/op	      11 allocs/op
+Benchmark_Two_EdDSA/sign-EdDSA-4         	   22922	     52319 ns/op	     912 B/op	      11 allocs/op
+Benchmark_Two_EdDSA/sign-EdDSA-4         	   23025	     52160 ns/op	     912 B/op	      11 allocs/op
+Benchmark_Two_EdDSA/sign-EdDSA-4         	   23019	     52323 ns/op	     912 B/op	      11 allocs/op
+Benchmark_Two_EdDSA/sign-EdDSA-4         	   23025	     52004 ns/op	     912 B/op	      11 allocs/op
+Benchmark_Two_EdDSA/check-EdDSA-4        	    8548	    137046 ns/op	    1592 B/op	      27 allocs/op
+Benchmark_Two_EdDSA/check-EdDSA-4        	    8949	    137121 ns/op	    1592 B/op	      27 allocs/op
+Benchmark_Two_EdDSA/check-EdDSA-4        	    8664	    136591 ns/op	    1592 B/op	      27 allocs/op
+Benchmark_Two_EdDSA/check-EdDSA-4        	    8697	    137226 ns/op	    1592 B/op	      27 allocs/op
+Benchmark_Two_EdDSA/check-EdDSA-4        	    8761	    137101 ns/op	    1592 B/op	      27 allocs/op
+Benchmark_Two_EdDSA/check-EdDSA-4        	    8364	    136429 ns/op	    1592 B/op	      27 allocs/op
+Benchmark_Two_EdDSA/check-EdDSA-4        	    8629	    136757 ns/op	    1592 B/op	      27 allocs/op
+Benchmark_Two_EdDSA/check-EdDSA-4        	    8587	    136798 ns/op	    1592 B/op	      27 allocs/op
+Benchmark_Two_EdDSA/check-EdDSA-4        	    8643	    136742 ns/op	    1592 B/op	      27 allocs/op
+Benchmark_Two_EdDSA/check-EdDSA-4        	    8827	    136615 ns/op	    1592 B/op	      27 allocs/op
+Benchmark_Two_HMAC/sign-HS256-4          	  373042	      3217 ns/op	    1726 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS256-4          	  382832	      3217 ns/op	    1726 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS256-4          	  375049	      3217 ns/op	    1726 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS256-4          	  364482	      3219 ns/op	    1726 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS256-4          	  387847	      3216 ns/op	    1726 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS256-4          	  387207	      3218 ns/op	    1726 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS256-4          	  375136	      3246 ns/op	    1726 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS256-4          	  384279	      3221 ns/op	    1726 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS256-4          	  369072	      3228 ns/op	    1726 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS256-4          	  379052	      3219 ns/op	    1726 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS256-reuse-4    	  636525	      1908 ns/op	     400 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS256-reuse-4    	  591312	      1898 ns/op	     400 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS256-reuse-4    	  601116	      1905 ns/op	     400 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS256-reuse-4    	  634837	      1895 ns/op	     400 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS256-reuse-4    	  606093	      1899 ns/op	     400 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS256-reuse-4    	  645091	      1899 ns/op	     400 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS256-reuse-4    	  639508	      1888 ns/op	     400 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS256-reuse-4    	  624874	      1903 ns/op	     400 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS256-reuse-4    	  636283	      1910 ns/op	     400 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS256-reuse-4    	  602641	      1911 ns/op	     400 B/op	       6 allocs/op
+Benchmark_Two_HMAC/check-HS256-4         	  227864	      5225 ns/op	    2481 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS256-4         	  228081	      5228 ns/op	    2480 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS256-4         	  228420	      5211 ns/op	    2481 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS256-4         	  228121	      5209 ns/op	    2481 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS256-4         	  227720	      5207 ns/op	    2481 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS256-4         	  228340	      5198 ns/op	    2481 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS256-4         	  229362	      5216 ns/op	    2481 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS256-4         	  227670	      5217 ns/op	    2481 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS256-4         	  228033	      5201 ns/op	    2481 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS256-4         	  230367	      5213 ns/op	    2481 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS256-reuse-4   	  297718	      3974 ns/op	    1304 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS256-reuse-4   	  305727	      4000 ns/op	    1304 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS256-reuse-4   	  308086	      3958 ns/op	    1304 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS256-reuse-4   	  303654	      3984 ns/op	    1304 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS256-reuse-4   	  306104	      3988 ns/op	    1304 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS256-reuse-4   	  304215	      3975 ns/op	    1304 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS256-reuse-4   	  307868	      3991 ns/op	    1304 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS256-reuse-4   	  305684	      3973 ns/op	    1304 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS256-reuse-4   	  306241	      3986 ns/op	    1304 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS256-reuse-4   	  303806	      3976 ns/op	    1304 B/op	      26 allocs/op
+Benchmark_Two_HMAC/sign-HS384-4          	  339456	      3532 ns/op	    2073 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS384-4          	  334044	      3537 ns/op	    2073 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS384-4          	  339120	      3543 ns/op	    2073 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS384-4          	  338709	      3565 ns/op	    2073 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS384-4          	  336963	      3579 ns/op	    2074 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS384-4          	  339915	      3535 ns/op	    2073 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS384-4          	  332913	      3541 ns/op	    2073 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS384-4          	  338490	      3542 ns/op	    2073 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS384-4          	  336364	      3532 ns/op	    2073 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS384-4          	  338685	      3542 ns/op	    2073 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS384-reuse-4    	  545121	      2062 ns/op	     432 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS384-reuse-4    	  588842	      2069 ns/op	     432 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS384-reuse-4    	  598610	      2044 ns/op	     432 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS384-reuse-4    	  587275	      2057 ns/op	     432 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS384-reuse-4    	  540099	      2049 ns/op	     432 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS384-reuse-4    	  540241	      2054 ns/op	     432 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS384-reuse-4    	  604387	      2061 ns/op	     432 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS384-reuse-4    	  538893	      2042 ns/op	     432 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS384-reuse-4    	  604429	      2078 ns/op	     432 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS384-reuse-4    	  612171	      2045 ns/op	     432 B/op	       6 allocs/op
+Benchmark_Two_HMAC/check-HS384-4         	  209517	      5611 ns/op	    2826 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS384-4         	  212276	      5643 ns/op	    2826 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS384-4         	  212743	      5633 ns/op	    2826 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS384-4         	  212479	      5626 ns/op	    2826 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS384-4         	  210062	      5619 ns/op	    2826 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS384-4         	  211371	      5646 ns/op	    2826 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS384-4         	  210940	      5645 ns/op	    2826 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS384-4         	  212067	      5625 ns/op	    2826 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS384-4         	  214308	      5629 ns/op	    2826 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS384-4         	  210224	      5641 ns/op	    2826 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS384-reuse-4   	  295839	      4136 ns/op	    1336 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS384-reuse-4   	  291066	      4127 ns/op	    1336 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS384-reuse-4   	  300787	      4127 ns/op	    1336 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS384-reuse-4   	  294163	      4124 ns/op	    1336 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS384-reuse-4   	  291933	      4176 ns/op	    1336 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS384-reuse-4   	  295201	      4146 ns/op	    1336 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS384-reuse-4   	  290869	      4137 ns/op	    1336 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS384-reuse-4   	  289184	      4103 ns/op	    1336 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS384-reuse-4   	  291962	      4131 ns/op	    1336 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS384-reuse-4   	  298880	      4107 ns/op	    1336 B/op	      26 allocs/op
+Benchmark_Two_HMAC/sign-HS512-4          	  336310	      3577 ns/op	    2106 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS512-4          	  333049	      3591 ns/op	    2106 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS512-4          	  333927	      3586 ns/op	    2106 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS512-4          	  334970	      3572 ns/op	    2106 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS512-4          	  332721	      3596 ns/op	    2106 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS512-4          	  329037	      3582 ns/op	    2106 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS512-4          	  335203	      3578 ns/op	    2106 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS512-4          	  325099	      3571 ns/op	    2106 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS512-4          	  338541	      3587 ns/op	    2106 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS512-4          	  334855	      3575 ns/op	    2106 B/op	      17 allocs/op
+Benchmark_Two_HMAC/sign-HS512-reuse-4    	  543076	      2098 ns/op	     464 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS512-reuse-4    	  583083	      2103 ns/op	     464 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS512-reuse-4    	  535641	      2089 ns/op	     464 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS512-reuse-4    	  589821	      2095 ns/op	     464 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS512-reuse-4    	  596677	      2116 ns/op	     464 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS512-reuse-4    	  592578	      2082 ns/op	     464 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS512-reuse-4    	  593936	      2097 ns/op	     464 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS512-reuse-4    	  588979	      2096 ns/op	     464 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS512-reuse-4    	  549298	      2109 ns/op	     464 B/op	       6 allocs/op
+Benchmark_Two_HMAC/sign-HS512-reuse-4    	  593000	      2111 ns/op	     464 B/op	       6 allocs/op
+Benchmark_Two_HMAC/check-HS512-4         	  214112	      5717 ns/op	    2858 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS512-4         	  210453	      5698 ns/op	    2858 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS512-4         	  210956	      5684 ns/op	    2858 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS512-4         	  213106	      5688 ns/op	    2858 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS512-4         	  214656	      5670 ns/op	    2858 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS512-4         	  210506	      5676 ns/op	    2858 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS512-4         	  211832	      5679 ns/op	    2858 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS512-4         	  211710	      5659 ns/op	    2858 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS512-4         	  209691	      5688 ns/op	    2858 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS512-4         	  207300	      5688 ns/op	    2858 B/op	      35 allocs/op
+Benchmark_Two_HMAC/check-HS512-reuse-4   	  283873	      4228 ns/op	    1368 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS512-reuse-4   	  292566	      4182 ns/op	    1368 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS512-reuse-4   	  285810	      4195 ns/op	    1368 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS512-reuse-4   	  287025	      4228 ns/op	    1368 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS512-reuse-4   	  284251	      4220 ns/op	    1368 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS512-reuse-4   	  294718	      4205 ns/op	    1368 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS512-reuse-4   	  293115	      4219 ns/op	    1368 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS512-reuse-4   	  283831	      4240 ns/op	    1368 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS512-reuse-4   	  287995	      4299 ns/op	    1368 B/op	      26 allocs/op
+Benchmark_Two_HMAC/check-HS512-reuse-4   	  289137	      4184 ns/op	    1368 B/op	      26 allocs/op
+Benchmark_Two_RSA/sign-1024-bit-4        	    3697	    328107 ns/op	   16921 B/op	     110 allocs/op
+Benchmark_Two_RSA/sign-1024-bit-4        	    3655	    327804 ns/op	   16922 B/op	     110 allocs/op
+Benchmark_Two_RSA/sign-1024-bit-4        	    3712	    327800 ns/op	   16920 B/op	     110 allocs/op
+Benchmark_Two_RSA/sign-1024-bit-4        	    3618	    327218 ns/op	   16923 B/op	     110 allocs/op
+Benchmark_Two_RSA/sign-1024-bit-4        	    3672	    327082 ns/op	   16920 B/op	     110 allocs/op
+Benchmark_Two_RSA/sign-1024-bit-4        	    3687	    327859 ns/op	   16921 B/op	     110 allocs/op
+Benchmark_Two_RSA/sign-1024-bit-4        	    3614	    327638 ns/op	   16922 B/op	     110 allocs/op
+Benchmark_Two_RSA/sign-1024-bit-4        	    3699	    327244 ns/op	   16921 B/op	     110 allocs/op
+Benchmark_Two_RSA/sign-1024-bit-4        	    3709	    325962 ns/op	   16922 B/op	     110 allocs/op
+Benchmark_Two_RSA/sign-1024-bit-4        	    3687	    327483 ns/op	   16921 B/op	     110 allocs/op
+Benchmark_Two_RSA/sign-2048-bit-4        	     801	   1500711 ns/op	   31596 B/op	     116 allocs/op
+Benchmark_Two_RSA/sign-2048-bit-4        	     806	   1488575 ns/op	   31600 B/op	     116 allocs/op
+Benchmark_Two_RSA/sign-2048-bit-4        	     806	   1489338 ns/op	   31597 B/op	     116 allocs/op
+Benchmark_Two_RSA/sign-2048-bit-4        	     808	   1488472 ns/op	   31600 B/op	     116 allocs/op
+Benchmark_Two_RSA/sign-2048-bit-4        	     802	   1495387 ns/op	   31603 B/op	     116 allocs/op
+Benchmark_Two_RSA/sign-2048-bit-4        	     801	   1489806 ns/op	   31604 B/op	     116 allocs/op
+Benchmark_Two_RSA/sign-2048-bit-4        	     802	   1495110 ns/op	   31595 B/op	     116 allocs/op
+Benchmark_Two_RSA/sign-2048-bit-4        	     804	   1492266 ns/op	   31601 B/op	     116 allocs/op
+Benchmark_Two_RSA/sign-2048-bit-4        	     787	   1482484 ns/op	   31597 B/op	     116 allocs/op
+Benchmark_Two_RSA/sign-2048-bit-4        	     806	   1496013 ns/op	   31595 B/op	     116 allocs/op
+Benchmark_Two_RSA/sign-4096-bit-4        	     147	   8196818 ns/op	   77914 B/op	     130 allocs/op
+Benchmark_Two_RSA/sign-4096-bit-4        	     147	   8048379 ns/op	   77936 B/op	     130 allocs/op
+Benchmark_Two_RSA/sign-4096-bit-4        	     148	   8046882 ns/op	   77852 B/op	     130 allocs/op
+Benchmark_Two_RSA/sign-4096-bit-4        	     148	   8055763 ns/op	   77882 B/op	     130 allocs/op
+Benchmark_Two_RSA/sign-4096-bit-4        	     148	   8038090 ns/op	   77905 B/op	     130 allocs/op
+Benchmark_Two_RSA/sign-4096-bit-4        	     148	   8066510 ns/op	   77940 B/op	     130 allocs/op
+Benchmark_Two_RSA/sign-4096-bit-4        	     148	   8047559 ns/op	   77911 B/op	     130 allocs/op
+Benchmark_Two_RSA/sign-4096-bit-4        	     148	   8098572 ns/op	   77936 B/op	     130 allocs/op
+Benchmark_Two_RSA/sign-4096-bit-4        	     147	   8091979 ns/op	   77938 B/op	     130 allocs/op
+Benchmark_Two_RSA/sign-4096-bit-4        	SIGQUIT: quit
+PC=0x7fff67f3f882 m=0 sigcode=0
+
+goroutine 0 [idle]:
+runtime.pthread_cond_wait(0x15d0188, 0x15d0148, 0x0)
+	/usr/local/Cellar/go/1.14.4/libexec/src/runtime/sys_darwin.go:390 +0x39
+runtime.semasleep(0xffffffffffffffff, 0xc000022000)
+	/usr/local/Cellar/go/1.14.4/libexec/src/runtime/os_darwin.go:63 +0x85
+runtime.notesleep(0x15cff48)
+	/usr/local/Cellar/go/1.14.4/libexec/src/runtime/lock_sema.go:173 +0xe0
+runtime.stopm()
+	/usr/local/Cellar/go/1.14.4/libexec/src/runtime/proc.go:1834 +0xc0
+runtime.findrunnable(0xc000022000, 0x0)
+	/usr/local/Cellar/go/1.14.4/libexec/src/runtime/proc.go:2366 +0xa0d
+runtime.schedule()
+	/usr/local/Cellar/go/1.14.4/libexec/src/runtime/proc.go:2526 +0x2fc
+runtime.goschedImpl(0xc000480900)
+	/usr/local/Cellar/go/1.14.4/libexec/src/runtime/proc.go:2711 +0xd6
+runtime.gosched_m(0xc000480900)
+	/usr/local/Cellar/go/1.14.4/libexec/src/runtime/proc.go:2719 +0x34
+runtime.mcall(0x1065596)
+	/usr/local/Cellar/go/1.14.4/libexec/src/runtime/asm_amd64.s:318 +0x5b
+
+goroutine 1 [chan receive]:
+testing.(*B).run1(0xc000014700, 0xc000014700)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:233 +0x9e
+testing.(*B).Run(0xc0000141c0, 0x135120d, 0x11, 0x1368508, 0x10da100)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:651 +0x341
+testing.runBenchmarks.func1(0xc0000141c0)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:533 +0x78
+testing.(*B).runN(0xc0000141c0, 0x1)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:191 +0xe8
+testing.runBenchmarks(0x1358266, 0x22, 0xc0002a91e0, 0x15c98a0, 0x8, 0x8, 0xc0000fdec0)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:539 +0x390
+testing.(*M).Run(0xc000066100, 0x0)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/testing.go:1205 +0x42d
+main.main()
+	_testmain.go:58 +0x135
+
+goroutine 932 [chan receive]:
+testing.(*B).doBench(0xc000014380, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:277 +0x73
+testing.(*benchContext).processBench(0xc0002a9220, 0xc000014380)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:568 +0x207
+testing.(*B).run(0xc000014540)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:268 +0x63
+testing.(*B).Run(0xc000014700, 0xc0000192f0, 0xd, 0xc000098e50, 0x0)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:652 +0x3fd
+github.com/cristaloleg/benches/jwt_test.Benchmark_Two_RSA(0xc000014700)
+	/Users/pascal/Code/benches/jwt/bench_test.go:363 +0xa4
+testing.(*B).runN(0xc000014700, 0x1)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:191 +0xe8
+testing.(*B).run1.func1(0xc000014700)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:231 +0x57
+created by testing.(*B).run1
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:224 +0x7d
+
+goroutine 997 [runnable]:
+math/big.nat.montgomery(0xc000137d40, 0x20, 0x46, 0xc0001378c0, 0x20, 0x44, 0xc0001378c0, 0x20, 0x44, 0xc0002e0500, ...)
+	/usr/local/Cellar/go/1.14.4/libexec/src/math/big/nat.go:213 +0x4e3
+math/big.nat.expNNMontgomery(0xc0001378c0, 0x20, 0x44, 0xc00013d900, 0x20, 0x45, 0xc0002eab40, 0x20, 0x45, 0xc0002e0500, ...)
+	/usr/local/Cellar/go/1.14.4/libexec/src/math/big/nat.go:1448 +0x8ff
+math/big.nat.expNN(0x0, 0x0, 0x0, 0xc00013d900, 0x40, 0x184, 0xc0002eab40, 0x20, 0x45, 0xc0002e0500, ...)
+	/usr/local/Cellar/go/1.14.4/libexec/src/math/big/nat.go:1261 +0x95f
+math/big.(*Int).Exp(0xc00000e3e0, 0xc000565a90, 0xc0002a9160, 0xc0002a90a0, 0xc000565ab0)
+	/usr/local/Cellar/go/1.14.4/libexec/src/math/big/int.go:494 +0x19d
+crypto/rsa.decrypt(0x13befa0, 0xc00009c240, 0xc00005c240, 0xc000565a90, 0xc0001358c0, 0x40, 0x44)
+	/usr/local/Cellar/go/1.14.4/libexec/src/crypto/rsa/rsa.go:508 +0x11c
+crypto/rsa.decryptAndCheck(0x13befa0, 0xc00009c240, 0xc00005c240, 0xc000565c28, 0x200, 0x200, 0xc0001358c0)
+	/usr/local/Cellar/go/1.14.4/libexec/src/crypto/rsa/rsa.go:543 +0x53
+crypto/rsa.SignPKCS1v15(0x13befa0, 0xc00009c240, 0xc00005c240, 0x6, 0xc00015a840, 0x30, 0x30, 0x301, 0xc00015a840, 0x30, ...)
+	/usr/local/Cellar/go/1.14.4/libexec/src/crypto/rsa/pkcs1v15.go:254 +0x27a
+github.com/cristalhq/jwt/v3.rsAlg.Sign(0x134de18, 0x5, 0x6, 0x0, 0xc00005c240, 0xc0000e2700, 0x55, 0x301, 0xc00015a810, 0xc000565d60, ...)
+	/Users/pascal/go/pkg/mod/github.com/cristalhq/jwt/v3@v3.0.2/algo_rs.go:75 +0xd7
+github.com/cristalhq/jwt/v3.(*Builder).Build(0xc000540a80, 0x1324be0, 0x15c9240, 0xc0001a6510, 0x0, 0x0)
+	/Users/pascal/go/pkg/mod/github.com/cristalhq/jwt/v3@v3.0.2/build.go:73 +0x21b
+github.com/cristalhq/jwt/v3.(*Builder).BuildBytes(0xc000540a80, 0x1324be0, 0x15c9240, 0xc0000e2380, 0x301, 0x301, 0x0, 0x0)
+	/Users/pascal/go/pkg/mod/github.com/cristalhq/jwt/v3@v3.0.2/build.go:45 +0x43
+github.com/cristaloleg/benches/jwt_test.Benchmark_Two_RSA.func1(0xc000014380)
+	/Users/pascal/Code/benches/jwt/bench_test.go:365 +0x70
+testing.(*B).runN(0xc000014380, 0x64)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:191 +0xe8
+testing.(*B).launch(0xc000014380)
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:321 +0xea
+created by testing.(*B).doBench
+	/usr/local/Cellar/go/1.14.4/libexec/src/testing/benchmark.go:276 +0x55
+
+rax    0x104
+rbx    0x2
+rcx    0x7ffeefbff558
+rdx    0x2814300
+rdi    0x15d0188
+rsi    0x281430102814400
+rbp    0x7ffeefbff5f0
+rsp    0x7ffeefbff558
+r8     0x0
+r9     0xa0
+r10    0x0
+r11    0x202
+r12    0x15d0188
+r13    0x16
+r14    0x281430102814400
+r15    0x2751dc0
+rip    0x7fff67f3f882
+rflags 0x203
+cs     0x7
+fs     0x0
+gs     0x0
+*** Test killed with quit: ran too long (11m0s).
+exit status 2
+FAIL	github.com/cristaloleg/benches/jwt	660.011s
