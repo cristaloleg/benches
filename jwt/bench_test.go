@@ -283,7 +283,7 @@ func Benchmark_Two_HMAC(b *testing.B) {
 	algs := []jwt2.Algorithm{jwt2.HS256, jwt2.HS384, jwt2.HS512}
 
 	for _, alg := range algs {
-		b.Run("sign-"+alg.String()+"-reuse", func(b *testing.B) {
+		b.Run("sign-"+alg.String(), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
 				signer, err := jwt2.NewSignerHS(alg, secret)
 				if err != nil {
