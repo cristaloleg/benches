@@ -181,7 +181,10 @@ func Benchmark_Two_ECDSA(b *testing.B) {
 	}
 
 	for _, test := range tests {
-		signer, _ := jwt2.NewSignerES(test.alg, test.key)
+		signer, err := jwt2.NewSignerES(test.alg, test.key)
+		if err != nil {
+			b.Fatal(err)
+		}
 		bui := jwt2.NewBuilder(signer)
 		b.Run("sign-"+test.alg.String(), func(b *testing.B) {
 			var tokenLen int
@@ -197,14 +200,20 @@ func Benchmark_Two_ECDSA(b *testing.B) {
 	}
 
 	for _, test := range tests {
-		signer, _ := jwt2.NewSignerES(test.alg, test.key)
+		signer, err := jwt2.NewSignerES(test.alg, test.key)
+		if err != nil {
+			b.Fatal(err)
+		}
 		bui := jwt2.NewBuilder(signer)
 		token, err := bui.Build(mybenchClaims)
 		if err != nil {
 			b.Fatal(err)
 		}
 
-		verifier, _ := jwt2.NewVerifierES(test.alg, &test.key.PublicKey)
+		verifier, err := jwt2.NewVerifierES(test.alg, &test.key.PublicKey)
+		if err != nil {
+			b.Fatal(err)
+		}
 		b.Run("check-"+test.alg.String(), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
 				err := verifier.Verify(token.Payload(), token.Signature())
@@ -217,7 +226,10 @@ func Benchmark_Two_ECDSA(b *testing.B) {
 }
 
 func Benchmark_Two_EdDSA(b *testing.B) {
-	signer, _ := jwt2.NewSignerEdDSA(testKeyEd25519Private)
+	signer, err := jwt2.NewSignerEdDSA(testKeyEd25519Private)
+	if err != nil {
+		b.Fatal(err)
+	}
 	bui := jwt2.NewBuilder(signer)
 	b.Run("sign-"+jwt2.EdDSA.String(), func(b *testing.B) {
 		var tokenLen int
@@ -235,7 +247,10 @@ func Benchmark_Two_EdDSA(b *testing.B) {
 	if err != nil {
 		b.Fatal(err)
 	}
-	verifier, _ := jwt2.NewVerifierEdDSA(testKeyEd25519Public)
+	verifier, err := jwt2.NewVerifierEdDSA(testKeyEd25519Public)
+	if err != nil {
+		b.Fatal(err)
+	}
 
 	b.Run("check-"+jwt2.EdDSA.String(), func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
@@ -253,7 +268,10 @@ func Benchmark_Two_HMAC(b *testing.B) {
 	algs := []jwt2.Algorithm{jwt2.HS256, jwt2.HS384, jwt2.HS512}
 
 	for _, alg := range algs {
-		signer, _ := jwt2.NewSignerHS(alg, secret)
+		signer, err := jwt2.NewSignerHS(alg, secret)
+		if err != nil {
+			b.Fatal(err)
+		}
 		bui := jwt2.NewBuilder(signer)
 		b.Run("sign-"+alg.String(), func(b *testing.B) {
 			var tokenLen int
@@ -269,13 +287,19 @@ func Benchmark_Two_HMAC(b *testing.B) {
 	}
 
 	for _, alg := range algs {
-		signer, _ := jwt2.NewSignerHS(alg, secret)
+		signer, err := jwt2.NewSignerHS(alg, secret)
+		if err != nil {
+			b.Fatal(err)
+		}
 		token, err := jwt2.NewBuilder(signer).Build(mybenchClaims)
 		if err != nil {
 			b.Fatal(err)
 		}
 
-		verifier, _ := jwt2.NewVerifierHS(alg, secret)
+		verifier, err := jwt2.NewVerifierHS(alg, secret)
+		if err != nil {
+			b.Fatal(err)
+		}
 		b.Run("check-"+alg.String(), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
 				err := verifier.Verify(token.Payload(), token.Signature())
@@ -291,7 +315,10 @@ func Benchmark_Two_RSA(b *testing.B) {
 	keys := []*rsa.PrivateKey{testKeyRSA1024, testKeyRSA2048, testKeyRSA4096}
 
 	for _, key := range keys {
-		signer, _ := jwt2.NewSignerRS(jwt2.RS384, key)
+		signer, err := jwt2.NewSignerRS(jwt2.RS384, key)
+		if err != nil {
+			b.Fatal(err)
+		}
 		bui := jwt2.NewBuilder(signer)
 		b.Run(fmt.Sprintf("sign-%d-bit", key.Size()*8), func(b *testing.B) {
 			var tokenLen int
@@ -307,13 +334,19 @@ func Benchmark_Two_RSA(b *testing.B) {
 	}
 
 	for _, key := range keys {
-		signer, _ := jwt2.NewSignerRS(jwt2.RS384, key)
+		signer, err := jwt2.NewSignerRS(jwt2.RS384, key)
+		if err != nil {
+			b.Fatal(err)
+		}
 		token, err := jwt2.NewBuilder(signer).Build(mybenchClaims)
 		if err != nil {
 			b.Fatal(err)
 		}
 
-		verifier, _ := jwt2.NewVerifierRS(jwt2.RS384, &key.PublicKey)
+		verifier, err := jwt2.NewVerifierRS(jwt2.RS384, &key.PublicKey)
+		if err != nil {
+			b.Fatal(err)
+		}
 		b.Run(fmt.Sprintf("check-%d-bit", key.Size()*8), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
 				err := verifier.Verify(token.Payload(), token.Signature())
