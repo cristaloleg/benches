@@ -70,7 +70,7 @@ func Benchmark_IncSW_Marshal(b *testing.B) {
 	}
 }
 
-func Benchmark_IncSW_To_Marshal(b *testing.B) {
+func Benchmark_IncSW_MarshalTo(b *testing.B) {
 	dst := make([]byte, 0, 1<<12)
 	b.ReportAllocs()
 	for n := 0; n < b.N; n++ {
